@@ -1,6 +1,6 @@
 #Wireframes for new Future Insights site
 
-View the document <b>index.html</b> in your browser.
+Download the ZIP file and view the document <b>index.html</b> in your browser.
 
 This document is NOT designed as a representation of the actual look of the product. It is designed purely for the team to assess the content for the proposed new site, decide what is needed and <b>roughly</b> where in the flow of the page we want the various content blocks to be visible to users.
 
@@ -14,7 +14,7 @@ The proposal is to build a site that encourages greater participation by users a
 
 The team should consider and discuss:
 
-1. Which content blocks are necessary on the homepage.
+1. Which content blocks are necessary on the homepage?
 2. Can / should any content blocks be moved to their own subpage or become part of another subpage?
 3. Can / should we expand on any of these content blocks, or combine additional content?
 4. What content do we want to omit altogether?
