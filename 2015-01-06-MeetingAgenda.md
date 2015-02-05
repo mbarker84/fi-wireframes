@@ -23,6 +23,7 @@
 ### About page wireframe
 * Are all these sections necessary? We should look at data from the current site, which pages are visited most / least often.
 * Should some of these sections be moved to homepage?
+* Do we need a sub-menu?
 * Radical thought: Do we even need this page at all?
 
 ### Next steps
