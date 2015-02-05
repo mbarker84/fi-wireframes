@@ -5,20 +5,21 @@
 
 @import "compass/reset";
 @import "susy";
+/* Partials */
 @import "variables";
 @import "fonts";
+@import "blog";
+@import "about";
 
 $susy: (
     columns: 12,
     global-box-sizing: border-box,
 );
 
+@include border-box-sizing;
+
 body {
     padding: 1em;
-}
-
-* + * {
-    margin-bottom: $small-padding;
 }
 
 /* Nav */
@@ -133,7 +134,7 @@ main {
             background-color: $color2;
             height: 10em;
         }
-        section.get-involved {
+        section.get-involved, section.faq {
             margin-bottom: 0;
         }
     }

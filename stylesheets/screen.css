@@ -67,6 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* Partials */
 /* Clearfix */
 /* line 1, ../sass/_fonts.scss */
 h1 {
@@ -79,7 +80,7 @@ h1 {
 h2 {
   font-family: Helvetica, sans-serif;
   font-size: 2em;
-  margin-bottom: .2em;
+  margin-bottom: .5em;
 }
 
 /* line 13, ../sass/_fonts.scss */
@@ -100,18 +101,183 @@ p.subtitle {
   margin-bottom: 3em;
 }
 
-/* line 16, ../sass/screen.scss */
+/* Header */
+/* line 3, ../sass/_blog.scss */
+header.blog-header {
+  height: auto;
+}
+/* line 5, ../sass/_blog.scss */
+header.blog-header .blog-header__header-group {
+  text-align: left;
+  margin: 0;
+}
+
+/* Main content */
+/* line 13, ../sass/_blog.scss */
+.wrapper--wide {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #cccccc;
+}
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+.wrapper--wide:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 18, ../sass/_variables.scss */
+.wrapper--wide:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 17, ../sass/_blog.scss */
+.wrapper--wide .sidebar-l {
+  margin-bottom: 0;
+  padding: 1em;
+  background-color: #999999;
+}
+@media (min-width: 900px) {
+  /* line 17, ../sass/_blog.scss */
+  .wrapper--wide .sidebar-l {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 24, ../sass/_blog.scss */
+.wrapper--wide .sidebar-l ul.blog-sidebar__filter li {
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #333333;
+  font-family: Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+/* line 30, ../sass/_blog.scss */
+.wrapper--wide .sidebar-l ul.blog-sidebar__filter li:last-child {
+  margin-bottom: 0;
+}
+/* line 33, ../sass/_blog.scss */
+.wrapper--wide .sidebar-l ul.blog-sidebar__filter li.current {
+  background-color: #cccccc;
+}
+/* line 36, ../sass/_blog.scss */
+.wrapper--wide .sidebar-l ul.blog-sidebar__filter li.search {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+/* line 42, ../sass/_blog.scss */
+.wrapper--wide .content {
+  margin-bottom: 0;
+  padding: 1em;
+  height: auto;
+  background-color: #FFFFFF;
+}
+@media (min-width: 900px) {
+  /* line 42, ../sass/_blog.scss */
+  .wrapper--wide .content {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 49, ../sass/_blog.scss */
+.wrapper--wide .content p {
+  margin-bottom: 1em;
+}
+/* line 52, ../sass/_blog.scss */
+.wrapper--wide .content .blog-content__img {
+  margin-bottom: 1em;
+  padding: 1em;
+  height: 30em;
+  background-color: #333333;
+}
+/* line 57, ../sass/_blog.scss */
+.wrapper--wide .content .blog-content__text-block {
+  height: 40em;
+  background-color: #999999;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+/* line 62, ../sass/_blog.scss */
+.wrapper--wide .content .blog-content__author {
+  background-color: #999999;
+  margin-bottom: 0;
+  padding: 1em;
+}
+/* line 18, ../sass/_variables.scss */
+.wrapper--wide .content .blog-content__author:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 66, ../sass/_blog.scss */
+.wrapper--wide .content .blog-content__author .blog-content__author-photo {
+  width: 10em;
+  height: 10em;
+  background-color: #333333;
+  float: left;
+}
+/* line 72, ../sass/_blog.scss */
+.wrapper--wide .content .blog-content__author .blog-content__author-bio {
+  background-color: #cccccc;
+  height: 10em;
+  margin-left: 11em;
+}
+/* line 79, ../sass/_blog.scss */
+.wrapper--wide .sidebar-r {
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #333333;
+}
+@media (min-width: 900px) {
+  /* line 79, ../sass/_blog.scss */
+  .wrapper--wide .sidebar-r {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 86, ../sass/_blog.scss */
+.wrapper--wide .sidebar-r ul.blog-sidebar__events li {
+  margin-bottom: 1em;
+  padding: 1em;
+  height: 8em;
+  background-color: #999999;
+  font-family: Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+/* line 93, ../sass/_blog.scss */
+.wrapper--wide .sidebar-r ul.blog-sidebar__events li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1, ../sass/_about.scss */
+section.team, section.advisors, section.careers, section.faq {
+  height: 20em;
+  background-color: #FFFFFF;
+}
+/* line 4, ../sass/_about.scss */
+section.team h2, section.advisors h2, section.careers h2, section.faq h2 {
+  position: relative;
+  top: 40%;
+}
+
+/* line 21, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../sass/screen.scss */
 body {
   padding: 1em;
 }
 
-/* line 20, ../sass/screen.scss */
-* + * {
-  margin-bottom: 1em;
-}
-
 /* Nav */
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 nav {
   max-width: 100%;
   margin-left: auto;
@@ -132,23 +298,23 @@ nav:after {
   display: block;
   clear: both;
 }
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 nav ul.top-nav, nav ul.login {
   list-style: none;
 }
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 nav ul.top-nav li, nav ul.login li {
   display: inline-block;
   margin-right: 1em;
   color: #FFFFFF;
   font-family: Helvetica, sans-serif;
 }
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 nav ul.top-nav {
   display: none;
 }
 @media (min-width: 700px) {
-  /* line 40, ../sass/screen.scss */
+  /* line 41, ../sass/screen.scss */
   nav ul.top-nav {
     display: block;
     width: 66.10169%;
@@ -159,26 +325,26 @@ nav ul.top-nav {
     border: none;
   }
 }
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 nav ul.login {
   display: none;
 }
 @media (min-width: 700px) {
-  /* line 50, ../sass/screen.scss */
+  /* line 51, ../sass/screen.scss */
   nav ul.login {
     display: block;
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 55, ../sass/screen.scss */
+  /* line 56, ../sass/screen.scss */
   nav ul.login li {
     float: right;
   }
 }
 
 /* Header */
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 header {
   height: 20em;
   background-color: #999999;
@@ -188,23 +354,23 @@ header {
   padding: 1em;
 }
 @media (min-width: 700px) {
-  /* line 64, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   header {
     height: 40em;
   }
 }
-/* line 73, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 header .header-group {
   position: relative;
   top: 20%;
 }
 @media (min-width: 700px) {
-  /* line 73, ../sass/screen.scss */
+  /* line 74, ../sass/screen.scss */
   header .header-group {
     top: 40%;
   }
 }
-/* line 80, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 header button.header__button {
   background-color: #333333;
   border: none;
@@ -215,13 +381,13 @@ header button.header__button {
 }
 
 /* Main */
-/* line 93, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 main {
   margin-bottom: 1em;
   padding: 1em;
   background-color: #cccccc;
 }
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 main .wrapper {
   max-width: 1200px;
   margin-left: auto;
@@ -233,7 +399,7 @@ main .wrapper:after {
   display: block;
   clear: both;
 }
-/* line 98, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 main .wrapper section {
   margin-bottom: 1em;
   padding: 1em;
@@ -245,7 +411,7 @@ main .wrapper section:after {
   display: block;
   clear: both;
 }
-/* line 102, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 main .wrapper section .row {
   max-width: 100%;
   margin-left: auto;
@@ -263,56 +429,56 @@ main .wrapper section .row:after {
   display: block;
   clear: both;
 }
-/* line 105, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 main .wrapper section .row .content-block1, main .wrapper section .row .content-block2, main .wrapper section .row .content-block3 {
   height: 15em;
   background-color: #999999;
 }
 @media (min-width: 700px) {
-  /* line 110, ../sass/screen.scss */
+  /* line 111, ../sass/screen.scss */
   main .wrapper section .row .content-block1, main .wrapper section .row .content-block2 {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 113, ../sass/screen.scss */
+  /* line 114, ../sass/screen.scss */
   main .wrapper section .row .content-block3 {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
 }
-/* line 120, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 main .wrapper section.about h2, main .wrapper section.events h2, main .wrapper section.get-involved h2, main .wrapper section.newsletter-signup h2 {
   position: relative;
   top: 40%;
 }
-/* line 125, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 main .wrapper section.about, main .wrapper section.events, main .wrapper section.get-involved {
   background-color: #FFFFFF;
   height: 20em;
 }
-/* line 129, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 main .wrapper section.news {
   background-color: #FFFFFF;
 }
-/* line 132, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 main .wrapper section.newsletter-signup {
   background-color: #333333;
   height: 10em;
 }
-/* line 136, ../sass/screen.scss */
-main .wrapper section.get-involved {
+/* line 137, ../sass/screen.scss */
+main .wrapper section.get-involved, main .wrapper section.faq {
   margin-bottom: 0;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .content-block1, .content-block2, .content-block3 {
   padding-top: 1em;
 }
 
 /* Footer */
-/* line 148, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 footer {
   margin-bottom: 1em;
   padding: 1em;
@@ -321,7 +487,7 @@ footer {
   text-align: center;
   margin-bottom: 0;
 }
-/* line 154, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 footer .text-group {
   position: relative;
   top: 40%;

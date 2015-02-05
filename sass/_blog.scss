@@ -1,0 +1,98 @@
+/* Header */
+
+header.blog-header {
+    height: auto;
+    .blog-header__header-group {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+/* Main content */
+
+.wrapper--wide {
+    @include container;
+    @include cf;
+    background-color: $color3;
+    .sidebar-l {
+        @include section(0, $small-padding);
+        background-color: $color1;
+        @media (min-width: 900px) {
+            @include span(3 of 12);
+        }
+        ul.blog-sidebar__filter {
+            li {
+                @include section($small-padding, $small-padding);
+                background-color: $color2;
+                font-family: $font-stack1;
+                color: $color4;
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
+            li.current {
+                background-color: $color3;
+            }
+            li.search {
+                background-color: $color4;
+                color: $color2;
+            }
+        }
+    }
+    .content {
+        @include section(0, $small-padding);
+        height: auto;
+        background-color: $color4;
+        @media (min-width: 900px) {
+            @include span(6 of 12);
+        }
+        p {
+            margin-bottom: $small-padding;
+        }
+        .blog-content__img {
+            @include section($small-padding, $small-padding);
+            height: 30em;
+            background-color: $color2;
+        }
+        .blog-content__text-block {
+            height: 40em;
+            background-color: $color1;
+            @include section($small-padding, $small-padding);
+        }
+        .blog-content__author {
+            background-color: $color1;
+            @include section(0, $small-padding);
+            @include cf;
+            .blog-content__author-photo {
+                width: 10em;
+                height: 10em;
+                background-color: $color2;
+                float: left;
+            }
+            .blog-content__author-bio {
+                background-color: $color3;
+                height: 10em;
+                margin-left: 11em;
+            }
+        }
+    }
+    .sidebar-r {
+        @include section($small-padding, $small-padding);
+        background-color: $color2;
+        @media (min-width: 900px) {
+            @include span(3 of 12 last);
+        }
+        ul.blog-sidebar__events {
+            li {
+                @include section($small-padding, $small-padding);
+                height: 8em;
+                background-color: $color1;
+                font-family: $font-stack1;
+                color: $color4;
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
