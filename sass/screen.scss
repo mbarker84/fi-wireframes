@@ -10,6 +10,7 @@
 @import "fonts";
 @import "blog";
 @import "about";
+@import "videos";
 
 $susy: (
     columns: 12,
@@ -63,7 +64,7 @@ nav {
 /* Header */
 
 header {
-    height: 20em;
+    height: 25em;
     background-color: $color1;
     text-align: center;
     position: relative;
@@ -107,9 +108,13 @@ main {
                     height: 15em;
                     background-color: $color1;
                 }
+                .content-block1, .content-block2 {
+                    margin-bottom: $small-padding;
+                }
                 @media (min-width: 700px) {
                     .content-block1, .content-block2 {
                         @include span(4 of 12);
+                        margin-bottom: 0;
                     }
                     .content-block3 {
                         @include span(4 of 12 last);
@@ -117,15 +122,14 @@ main {
                 }
             }
         }
-        section.about, section.events, section.get-involved, section.newsletter-signup {
+        section.about, section.newsletter-signup {
             h2 {
                 position: relative;
                 top: 40%;
             }
         }
-        section.about, section.events, section.get-involved {
+        section.get-involved {
             background-color: $color4;
-            height: 20em;
         }
         section.news {
             background-color: $color4;
@@ -142,6 +146,43 @@ main {
 
 .content-block1, .content-block2, .content-block3 {
     padding-top: 1em;
+}
+
+/* Events section */
+
+section.events {
+    background-color: $color4;
+    padding-bottom: 0;
+    ul.events-section__list {
+        list-style: none;
+        @include cf;
+        li {
+            @include span(6 of 12);
+            margin-bottom: gutter(12);
+            padding: $small-padding;
+            display: inline-block;
+            height: 8em;
+            background-color: $color1;
+            font-family: $font-stack1;
+        }
+        @media (max-width: 699px) {
+            li:nth-child(2), li:nth-child(4), li:last-child {
+                @include span(6 of 12 last);
+            }
+        }
+        @media (min-width: 700px) {
+            li {
+                @include span(4 of 12);
+                height: 10em;
+            }
+            li:nth-child(3), li:last-child {
+                @include span(4 of 12 last);
+            }
+            li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 /* Footer */

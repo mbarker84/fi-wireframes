@@ -14,31 +14,74 @@ header.blog-header {
     @include container;
     @include cf;
     background-color: $color3;
+    /* Right Sidebar */
     .sidebar-l {
         @include section(0, $small-padding);
+        @include cf;
         background-color: $color1;
         @media (min-width: 900px) {
             @include span(3 of 12);
         }
         ul.blog-sidebar__filter {
             li {
-                @include section($small-padding, $small-padding);
+                @include section(0, $small-padding);
+                @include span(2 of 6);
                 background-color: $color2;
                 font-family: $font-stack1;
                 color: $color4;
             }
-            li:last-child {
-                margin-bottom: 0;
+            li:nth-child(3) {
+                @include span(2 of 6 last);
+            }
+            li:first-child, li:nth-child(2), li:nth-child(3) {
+                height: 4em;
+                margin-bottom: $small-padding;
+                @media (min-width: 700px) {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            li:nth-child(4), li:nth-child(5) {
+                width: 100%;
+                margin-bottom: $small-padding;
+                @include cf;
             }
             li.current {
                 background-color: $color3;
             }
             li.search {
+                @include cf;
                 background-color: $color4;
                 color: $color2;
+                width: 100%;
+            }
+            .blog-sidebar__speaker {
+                @include span(2 of 6);
+                height: 5em;
+                background-color: $color1;
+                margin-top: $small-padding;
+                margin-bottom: $small-padding;
+                display: none;
+                @media (min-width: 700px) {
+                    display: block;
+                }
+            }
+            .blog-sidebar__speaker:last-child {
+                @include span(2 of 6 last);
+            }
+            .blog-sidebar__button {
+                padding: .6em;
+                border-radius: .2em;
+                border: none;
+                font-size: 1.1em;
+                display: none;
+                @media (min-width: 700px) {
+                    display: block;
+                }
             }
         }
     }
+    /* Center content */
     .content {
         @include section(0, $small-padding);
         height: auto;
@@ -49,15 +92,32 @@ header.blog-header {
         p {
             margin-bottom: $small-padding;
         }
+        .row {
+            @include cf;
+            border-bottom: 2px solid $color3;
+            margin-bottom: $small-padding;
+            padding-bottom: $small-padding;
+        }
+        .row:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
         .blog-content__img {
-            @include section($small-padding, $small-padding);
-            height: 30em;
+            @include section(0, $small-padding);
+            height: 15em;
             background-color: $color2;
+            @media (min-width: 700px) {
+                @include span(4 of 12);
+            }
         }
         .blog-content__text-block {
-            height: 40em;
+            height: 15em;
             background-color: $color1;
-            @include section($small-padding, $small-padding);
+            @include section(0, $small-padding);
+            @media (min-width: 700px) {
+                @include span(8 of 12 last);
+            }
         }
         .blog-content__author {
             background-color: $color1;
@@ -75,7 +135,11 @@ header.blog-header {
                 margin-left: 11em;
             }
         }
+        .blog-content__pagination {
+            text-align: center;
+        }
     }
+    /* Left sidebar */
     .sidebar-r {
         @include section($small-padding, $small-padding);
         background-color: $color2;
