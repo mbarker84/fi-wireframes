@@ -11,6 +11,7 @@
 @import "blog";
 @import "about";
 @import "videos";
+@import "speakers";
 
 $susy: (
     columns: 12,
@@ -89,6 +90,11 @@ header {
     }
 }
 
+h2.header--secondary {
+    margin-top: $small-padding;
+    text-align: left;
+}
+
 
 /* Main */
 
@@ -101,26 +107,6 @@ main {
             @include section($small-padding, $small-padding);
             @include cf;
             text-align: center;
-            .row {
-                @include container;
-                @include cf;
-                .content-block1, .content-block2, .content-block3 {
-                    height: 15em;
-                    background-color: $color1;
-                }
-                .content-block1, .content-block2 {
-                    margin-bottom: $small-padding;
-                }
-                @media (min-width: 700px) {
-                    .content-block1, .content-block2 {
-                        @include span(4 of 12);
-                        margin-bottom: 0;
-                    }
-                    .content-block3 {
-                        @include span(4 of 12 last);
-                    }
-                }
-            }
         }
         section.about, section.newsletter-signup {
             h2 {
@@ -144,8 +130,25 @@ main {
     }
 }
 
-.content-block1, .content-block2, .content-block3 {
-    padding-top: 1em;
+.row {
+    @include container;
+    @include cf;
+    .content-block1, .content-block2, .content-block3 {
+        height: 15em;
+        background-color: $color1;
+        @include section(0, $small-padding);
+    }
+    @media (min-width: 700px) {
+        .content-block1, .content-block2 {
+            @include span(4 of 12);
+        }
+        .content-block3 {
+            @include span(4 of 12 last);
+        }
+        .content-block1, .content-block2, .content-block {
+            margin-bottom: 0;
+        }
+    }
 }
 
 /* Events section */

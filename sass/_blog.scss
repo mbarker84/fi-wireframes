@@ -106,14 +106,14 @@ header.blog-header {
         .blog-content__img {
             @include section(0, $small-padding);
             height: 15em;
-            background-color: $color2;
+            background-color: $color1;
             @media (min-width: 700px) {
                 @include span(4 of 12);
             }
         }
         .blog-content__text-block {
             height: 15em;
-            background-color: $color1;
+            background-color: $color3;
             @include section(0, $small-padding);
             @media (min-width: 700px) {
                 @include span(8 of 12 last);
