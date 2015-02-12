@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, p.subtitle, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -85,18 +85,17 @@ h2 {
 
 /* line 13, ../sass/_fonts.scss */
 h3 {
-  font-family: Helvetica, sans-serif;
   font-size: 1.5em;
   margin-bottom: .2em;
 }
 
-/* line 19, ../sass/_fonts.scss */
+/* line 18, ../sass/_fonts.scss */
 p, p.subtitle {
   font-family: Helvetica, sans-serif;
   font-size: 1em;
 }
 
-/* line 23, ../sass/_fonts.scss */
+/* line 22, ../sass/_fonts.scss */
 p.subtitle {
   margin-bottom: 3em;
 }
@@ -123,7 +122,7 @@ header.blog-header .blog-header__header-group {
   /* Center content */
   /* Left sidebar */
 }
-/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .wrapper--wide:after {
   content: " ";
   display: block;
@@ -415,10 +414,11 @@ ul.content__gallery li {
   margin-right: 3.44828%;
   height: 8em;
   background-color: #999999;
+  padding: 1em;
   margin-bottom: 3.44828%;
 }
 @media (max-width: 699px) {
-  /* line 21, ../sass/_videos.scss */
+  /* line 22, ../sass/_videos.scss */
   ul.content__gallery li:nth-child(2n) {
     width: 48.27586%;
     float: right;
@@ -432,13 +432,27 @@ ul.content__gallery li {
     float: left;
     margin-right: 1.69492%;
     margin-bottom: 1.69492%;
+    height: 10em;
   }
-  /* line 29, ../sass/_videos.scss */
+  /* line 31, ../sass/_videos.scss */
   ul.content__gallery li:nth-child(3n) {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
+}
+/* line 36, ../sass/_videos.scss */
+ul.content__gallery li.locked {
+  background-color: #cccccc;
+}
+
+/* line 41, ../sass/_videos.scss */
+.content__signup {
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #333333;
+  color: #FFFFFF;
+  min-height: 5em;
 }
 
 /* line 1, ../sass/_speakers.scss */
@@ -446,16 +460,15 @@ ul.content__gallery li {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
-  height: 15em;
 }
-/* line 4, ../sass/_speakers.scss */
+/* line 3, ../sass/_speakers.scss */
 .content__col--left .content__img--full {
   margin-bottom: 1em;
   padding: 1em;
   height: 15em;
   background-color: #999999;
 }
-/* line 9, ../sass/_speakers.scss */
+/* line 8, ../sass/_speakers.scss */
 .content__col--left .content__contact-info {
   margin-bottom: 1em;
   padding: 1em;
@@ -463,7 +476,7 @@ ul.content__gallery li {
   background-color: #cccccc;
 }
 
-/* line 16, ../sass/_speakers.scss */
+/* line 15, ../sass/_speakers.scss */
 .content__text-block--right {
   width: 66.10169%;
   float: right;
@@ -472,20 +485,31 @@ ul.content__gallery li {
   background-color: #cccccc;
 }
 
-/* line 21, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
+/* line 20, ../sass/_speakers.scss */
+.short {
+  height: 10em;
+  margin-bottom: 0;
+}
+
+/* line 14, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+/* line 28, ../sass/screen.scss */
 body {
   padding: 1em;
 }
 
 /* Nav */
-/* line 29, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 nav {
   max-width: 100%;
   margin-left: auto;
@@ -494,7 +518,7 @@ nav {
   margin-bottom: 1em;
   padding: 1em;
 }
-/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 nav:after {
   content: " ";
   display: block;
@@ -506,23 +530,23 @@ nav:after {
   display: block;
   clear: both;
 }
-/* line 34, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 nav ul.top-nav, nav ul.login {
   list-style: none;
 }
-/* line 36, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 nav ul.top-nav li, nav ul.login li {
   display: inline-block;
   margin-right: 1em;
   color: #FFFFFF;
   font-family: Helvetica, sans-serif;
 }
-/* line 43, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 nav ul.top-nav {
   display: none;
 }
 @media (min-width: 700px) {
-  /* line 43, ../sass/screen.scss */
+  /* line 48, ../sass/screen.scss */
   nav ul.top-nav {
     display: block;
     width: 66.10169%;
@@ -533,26 +557,26 @@ nav ul.top-nav {
     border: none;
   }
 }
-/* line 53, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 nav ul.login {
   display: none;
 }
 @media (min-width: 700px) {
-  /* line 53, ../sass/screen.scss */
+  /* line 58, ../sass/screen.scss */
   nav ul.login {
     display: block;
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 58, ../sass/screen.scss */
+  /* line 63, ../sass/screen.scss */
   nav ul.login li {
     float: right;
   }
 }
 
 /* Header */
-/* line 67, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 header {
   height: 25em;
   background-color: #999999;
@@ -562,23 +586,23 @@ header {
   padding: 1em;
 }
 @media (min-width: 700px) {
-  /* line 67, ../sass/screen.scss */
+  /* line 72, ../sass/screen.scss */
   header {
     height: 40em;
   }
 }
-/* line 76, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 header .header-group {
   position: relative;
   top: 20%;
 }
 @media (min-width: 700px) {
-  /* line 76, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   header .header-group {
     top: 40%;
   }
 }
-/* line 83, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 header button.header__button {
   background-color: #333333;
   border: none;
@@ -588,32 +612,32 @@ header button.header__button {
   font-size: 1.2em;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 h2.header--secondary {
   margin-top: 1em;
   text-align: left;
 }
 
 /* Main */
-/* line 101, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 main {
   margin-bottom: 1em;
   padding: 1em;
   background-color: #cccccc;
 }
-/* line 104, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 main .wrapper {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 main .wrapper:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 106, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 main .wrapper section {
   margin-bottom: 1em;
   padding: 1em;
@@ -625,36 +649,36 @@ main .wrapper section:after {
   display: block;
   clear: both;
 }
-/* line 112, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 main .wrapper section.about h2, main .wrapper section.newsletter-signup h2 {
   position: relative;
   top: 40%;
 }
-/* line 117, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 main .wrapper section.get-involved {
   background-color: #FFFFFF;
 }
-/* line 120, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 main .wrapper section.news {
   background-color: #FFFFFF;
 }
-/* line 123, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 main .wrapper section.newsletter-signup {
   background-color: #333333;
   height: 10em;
 }
-/* line 127, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 main .wrapper section.get-involved, main .wrapper section.faq {
   margin-bottom: 0;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .row {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .row:after {
   content: " ";
   display: block;
@@ -666,7 +690,7 @@ main .wrapper section.get-involved, main .wrapper section.faq {
   display: block;
   clear: both;
 }
-/* line 136, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .row .content-block1, .row .content-block2, .row .content-block3 {
   height: 15em;
   background-color: #999999;
@@ -674,31 +698,47 @@ main .wrapper section.get-involved, main .wrapper section.faq {
   padding: 1em;
 }
 @media (min-width: 700px) {
-  /* line 142, ../sass/screen.scss */
+  /* line 147, ../sass/screen.scss */
   .row .content-block1, .row .content-block2 {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 145, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   .row .content-block3 {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 148, ../sass/screen.scss */
+  /* line 153, ../sass/screen.scss */
   .row .content-block1, .row .content-block2, .row .content-block {
     margin-bottom: 0;
   }
 }
 
+/* line 159, ../sass/screen.scss */
+button.content__button {
+  background-color: #999999;
+  border: none;
+  border-radius: .2em;
+  padding: 1em;
+  color: #FFFFFF;
+  font-size: 1.2em;
+}
+
+/* line 167, ../sass/screen.scss */
+button.sidebar__button {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
 /* Events section */
-/* line 156, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 section.events {
   background-color: #FFFFFF;
   padding-bottom: 0;
 }
-/* line 159, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 section.events ul.events-section__list {
   list-style: none;
 }
@@ -708,7 +748,7 @@ section.events ul.events-section__list:after {
   display: block;
   clear: both;
 }
-/* line 162, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 section.events ul.events-section__list li {
   width: 49.15254%;
   float: left;
@@ -721,7 +761,7 @@ section.events ul.events-section__list li {
   font-family: Helvetica, sans-serif;
 }
 @media (max-width: 699px) {
-  /* line 172, ../sass/screen.scss */
+  /* line 190, ../sass/screen.scss */
   section.events ul.events-section__list li:nth-child(2), section.events ul.events-section__list li:nth-child(4), section.events ul.events-section__list li:last-child {
     width: 49.15254%;
     float: right;
@@ -729,27 +769,27 @@ section.events ul.events-section__list li {
   }
 }
 @media (min-width: 700px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 195, ../sass/screen.scss */
   section.events ul.events-section__list li {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     height: 10em;
   }
-  /* line 181, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   section.events ul.events-section__list li:nth-child(3), section.events ul.events-section__list li:last-child {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 184, ../sass/screen.scss */
+  /* line 202, ../sass/screen.scss */
   section.events ul.events-section__list li:nth-child(4), section.events ul.events-section__list li:nth-child(5), section.events ul.events-section__list li:nth-child(6) {
     margin-bottom: 0;
   }
 }
 
 /* Footer */
-/* line 193, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 footer {
   margin-bottom: 1em;
   padding: 1em;
@@ -758,7 +798,7 @@ footer {
   text-align: center;
   margin-bottom: 0;
 }
-/* line 199, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 footer .text-group {
   position: relative;
   top: 40%;

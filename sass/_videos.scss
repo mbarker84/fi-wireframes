@@ -17,6 +17,7 @@ ul.content__gallery {
         @include span(3 of 6);
         height: 8em;
         background-color: $color1;
+        padding: $small-padding;
         margin-bottom: gutter(6);
         &:nth-child(2n) {
             @media (max-width: 699px) {
@@ -26,9 +27,20 @@ ul.content__gallery {
         @media (min-width: 700px) {
             @include span(4 of 12);
             margin-bottom: gutter(12);
+            height: 10em;
             &:nth-child(3n) {
                 @include span(4 of 12 last);
             }
         }
     }
+    li.locked {
+        background-color: $color3;
+    }
+}
+
+.content__signup {
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    color: $color4;
+    min-height: 5em;
 }

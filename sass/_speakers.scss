@@ -1,6 +1,5 @@
 .content__col--left {
     @include span(4 of 12);
-    height: 15em;
     .content__img--full {
         @include section($small-padding, $small-padding);
         height: 15em;
@@ -17,4 +16,8 @@
     @include span(8 of 12 last);
     height: 30em;
     background-color: $color3;
+}
+.short {
+    height: 10em;
+    margin-bottom: 0;
 }
