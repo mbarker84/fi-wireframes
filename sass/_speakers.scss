@@ -14,10 +14,18 @@
 
 .content__text-block--right {
     @include span(8 of 12 last);
-    height: 30em;
+    height: 20em;
     background-color: $color3;
 }
 .short {
     height: 10em;
     margin-bottom: 0;
+}
+
+.content__text-block--right-secondary {
+    @include span(8 of 12 last);
+    height: 10em;
+    background-color: $color3;
+    margin-top: $small-padding;
+    @include section(0, $small-padding);
 }

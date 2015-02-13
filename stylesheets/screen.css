@@ -481,7 +481,7 @@ ul.content__gallery li.locked {
   width: 66.10169%;
   float: right;
   margin-right: 0;
-  height: 30em;
+  height: 20em;
   background-color: #cccccc;
 }
 
@@ -489,6 +489,18 @@ ul.content__gallery li.locked {
 .short {
   height: 10em;
   margin-bottom: 0;
+}
+
+/* line 25, ../sass/_speakers.scss */
+.content__text-block--right-secondary {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+  height: 10em;
+  background-color: #cccccc;
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding: 1em;
 }
 
 /* line 14, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
