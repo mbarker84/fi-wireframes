@@ -1,0 +1,243 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "susy";
+/* Partials */
+@import "variables";
+@import "fonts";
+@import "blog";
+@import "about";
+@import "videos";
+@import "speakers";
+
+$susy: (
+    columns: 12,
+    global-box-sizing: border-box,
+);
+
+@include border-box-sizing;
+
+
+* {
+    font-family: $font-stack1;
+}
+
+body {
+    padding: 1em;
+}
+
+/* Nav */
+
+nav {
+    @include container;
+    @include cf;
+    background-color: $color2;
+    @include section($small-padding, $small-padding);
+    ul.top-nav, ul.login {
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-right: $small-padding;
+            color: $color4;
+            font-family: $font-stack1;
+        }
+    }
+    ul.top-nav {
+        display: none;
+        @media (min-width: 700px) {
+            display: block;
+            @include span(8 of 12);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+    ul.login {
+        display: none;
+        @media (min-width: 700px) {
+            display: block;
+            @include span(4 of 12 last);
+            li {
+                float: right;
+            }
+        }
+    }
+}
+
+/* Header */
+
+header {
+    height: 25em;
+    background-color: $color1;
+    text-align: center;
+    position: relative;
+    @media (min-width: 700px) {
+        height: 40em;
+    }
+    @include section($small-padding, $small-padding);
+    .header-group {
+        position: relative;
+        top: 20%;
+        @media (min-width: 700px) {
+            top: 40%;
+        }
+    }
+    button.header__button {
+        background-color: $color2;
+        border: none;
+        border-radius: .2em;
+        padding: $small-padding;
+        color: $color4;
+        font-size: 1.2em;
+    }
+}
+
+h2.header--secondary {
+    margin-top: $small-padding;
+    text-align: left;
+}
+
+
+/* Main */
+
+main {
+    @include section($small-padding, $small-padding);
+    background-color: $color3;
+    .wrapper {
+        @include container(1200px);
+        section {
+            @include section($small-padding, $small-padding);
+            @include cf;
+            text-align: center;
+        }
+        section.about, section.newsletter-signup {
+            h2 {
+                position: relative;
+                top: 40%;
+            }
+        }
+        section.get-involved {
+            background-color: $color4;
+        }
+        section.news {
+            background-color: $color4;
+        }
+        section.newsletter-signup {
+            background-color: $color2;
+            height: 10em;
+        }
+        section.get-involved, section.faq {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.row {
+    @include container;
+    @include cf;
+    .content-block1, .content-block2, .content-block3 {
+        height: 15em;
+        background-color: $color1;
+        @include section($small-padding, $small-padding);
+    }
+    @media (min-width: 700px) {
+        .content-block1, .content-block2 {
+            @include span(4 of 12);
+            margin-bottom: 0;
+        }
+        .content-block3 {
+            @include span(4 of 12 last);
+            margin-bottom: 0;
+        }
+    }
+}
+
+button.content__button {
+        background-color: $color1;
+        border: none;
+        border-radius: .2em;
+        padding: $small-padding;
+        color: $color4;
+        font-size: 1.2em;
+}
+button.sidebar__button {
+    margin-bottom: $small-padding;
+    width: 100%;
+}
+
+/* Events section */
+
+section.events {
+    background-color: $color4;
+    padding-bottom: 0;
+    ul.events-section__list {
+        list-style: none;
+        @include cf;
+        li {
+            @include span(6 of 12);
+            margin-bottom: gutter(12);
+            padding: $small-padding;
+            display: inline-block;
+            height: 8em;
+            background-color: $color1;
+            font-family: $font-stack1;
+        }
+        @media (max-width: 699px) {
+            li:nth-child(2), li:nth-child(4), li:last-child {
+                @include span(6 of 12 last);
+            }
+        }
+        @media (min-width: 700px) {
+            li {
+                @include span(4 of 12);
+                height: 10em;
+            }
+            li:nth-child(3), li:last-child {
+                @include span(4 of 12 last);
+            }
+            li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* General content */
+
+.content__col--full-1 {
+    @include section($small-padding, $small-padding);
+    height: 12em;
+    background-color: $color1;
+    @media (min-width: 700px) {
+        height: 20em;
+    }
+}
+
+.content__col--full-2 {
+    @include section(0, $small-padding);
+    height: 15em;
+    background-color: $color3;
+}
+
+.content__col--full-2-long {
+    @include section(0, $small-padding);
+    height: 60em;
+    background-color: $color3;
+}
+
+/* Footer */
+
+footer {
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    height: 10em;
+    text-align: center;
+    margin-bottom: 0;
+    .text-group {
+        position: relative;
+        top: 40%;
+    }
+}

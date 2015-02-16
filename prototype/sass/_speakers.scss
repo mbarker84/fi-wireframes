@@ -1,0 +1,37 @@
+.content__col--left {
+    @media (min-width: 700px) {
+        @include span(4 of 12);
+    }
+    .content__img--full {
+        @include section($small-padding, $small-padding);
+        height: 15em;
+        background-color: $color1;
+    }
+    .content__contact-info {
+        @include section($small-padding, $small-padding);
+        height: 10em;
+        background-color: $color3;
+    }
+}
+
+.content__text-block--right {
+    @media (min-width: 700px) {
+        @include span(8 of 12 last);
+    }
+    height: 20em;
+    background-color: $color3;
+}
+.short {
+    height: 10em;
+    margin-bottom: 0;
+}
+
+.content__text-block--right-secondary {
+    @media (min-width: 700px) {
+        @include span(8 of 12 last);
+    }
+    height: 10em;
+    background-color: $color3;
+    margin-top: $small-padding;
+    @include section(0, $small-padding);
+}
