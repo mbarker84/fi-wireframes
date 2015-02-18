@@ -12,6 +12,7 @@
 @import "about";
 @import "videos";
 @import "speakers";
+@import "nav";
 
 $susy: (
     columns: 12,
@@ -23,10 +24,6 @@ $susy: (
 
 * {
     font-family: $font-stack1;
-}
-
-body {
-    padding: 1em;
 }
 
 
@@ -42,43 +39,6 @@ a.block {
     }
 }
 
-/* Nav */
-
-nav {
-    @include container;
-    @include cf;
-    background-color: $color2;
-    @include section($small-padding, $small-padding);
-    ul.top-nav, ul.login {
-        list-style: none;
-        li {
-            display: inline-block;
-            margin-right: $small-padding;
-            color: $color4;
-            font-family: $font-stack1;
-        }
-    }
-    ul.top-nav {
-        display: none;
-        @media (min-width: 700px) {
-            display: block;
-            @include span(8 of 12);
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border: none;
-        }
-    }
-    ul.login {
-        display: none;
-        @media (min-width: 700px) {
-            display: block;
-            @include span(4 of 12 last);
-            li {
-                float: right;
-            }
-        }
-    }
-}
 
 /* Header */
 
@@ -90,7 +50,7 @@ header {
     @media (min-width: 700px) {
         height: 40em;
     }
-    @include section($small-padding, $small-padding);
+    @include section(0, $small-padding);
     .header-group {
         position: relative;
         top: 20%;
@@ -118,10 +78,8 @@ h2.header--secondary {
 /* Main */
 
 main {
-    @include section($small-padding, $small-padding);
+    @include section(0, $small-padding);
     background-color: $color3;
-    .wrapper {
-        @include container(1200px);
         section {
             @include section($small-padding, $small-padding);
             @include cf;
@@ -139,7 +97,6 @@ main {
         section.get-involved, section.faq {
             margin-bottom: 0;
         }
-    }
 }
 
 .row {
@@ -179,7 +136,7 @@ button.sidebar__button {
 
 section.events {
     background-color: $color4;
-    padding-bottom: 0;
+    @include section($small-padding, $small-padding);
     ul.events-section__list {
         list-style: none;
         @include cf;
@@ -214,6 +171,10 @@ section.events {
 
 /* General content */
 
+.wrapper {
+        @include container(1200px);
+}
+
 .content__col--full-1 {
     @include section($small-padding, $small-padding);
     height: 12em;
@@ -235,16 +196,59 @@ section.events {
     background-color: $color3;
 }
 
+/* Newsletter signup */
+
+h2.signup__title {
+    color: $color3;
+}
+
+form {
+    @include container(12);
+    @include cf;
+    fieldset {
+        @media (min-width: 700px) {
+            @include span(10 of 12);
+        }
+        label {
+            color: $color4;
+            text-align: left;
+            width: 100%;
+            float: left;
+            @media (min-width: 700px) {
+                @include span(6 of 12);
+            }
+        &:last-child {
+            @media (min-width: 700px) {
+                @include span(6 of 12 last);
+            }
+        }
+        input {
+                margin: .5em 0 $small-padding 0;
+                width: 100%;
+                font-size: 1.2em;
+                padding: .3em;
+            }
+        }
+    }
+    button {
+        padding: .6em $small-padding .4em $small-padding;
+        border-radius: .2em;
+        border: none;
+        font-size: 1.2em;
+        margin-top: 0;
+        cursor: pointer;
+        @media (min-width: 700px) {
+            @include span(2 of 12 last);
+            margin-top: 1.2em;
+        }
+    }
+}
+
 /* Footer */
 
 footer {
+    @include cf;
     @include section($small-padding, $small-padding);
     background-color: $color2;
-    height: 10em;
-    text-align: center;
     margin-bottom: 0;
-    .text-group {
-        position: relative;
-        top: 40%;
-    }
 }

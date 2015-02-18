@@ -7,3 +7,8 @@
 
 # Single blog post
 * Do we want to include ‘Comments’ section?
+
+# Footer
+* What do we want to include?
+    - Social icons
+    - Contact info (company email and phone number?)

@@ -1,0 +1,44 @@
+/* Nav */
+
+nav {
+    @include container;
+    @include cf;
+    background-color: $color2;
+    @include section(0, $small-padding);
+}
+    ul.top-nav, ul.login {
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-right: $small-padding;
+            color: $color4;
+            font-family: $font-stack1;
+            padding-top: .8em;
+        }
+    }
+    ul.top-nav {
+        display: none;
+        @media (min-width: 700px) {
+            display: block;
+            @include span(8 of 12);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+    ul.login {
+        display: none;
+        @media (min-width: 700px) {
+            display: block;
+            @include span(4 of 12 last);
+            li {
+                float: right;
+            }
+            li.nav__social-button {
+                width: 2.5em;
+                height: 2.5em;
+                border-radius: 50%;
+                background-color: $color4;
+            }
+        }
+    }

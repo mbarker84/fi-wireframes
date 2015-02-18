@@ -23,3 +23,10 @@ p.subtitle {
     @extend p;
     margin-bottom: $large-padding;
 }
+p.section__body-text {
+    margin-top: $small-padding;
+    text-align: left;
+    a {
+        color: $color1;
+    }
+}

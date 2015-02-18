@@ -21,8 +21,10 @@
             <li><a href="#footer">Contact us</a></li><!--contact forms-->
         </ul>
         <ul class="login">
-            <li>Login / Sign Up</li>
-            <li>Social icons</li>
+            <li class="nav__social-button"><a href=""></a></li>
+            <li class="nav__social-button"><a href=""></a></li>
+            <li class="nav__social-button"><a href=""></a></li>
+            <li><a href="">Login / Sign Up</a></li>
         </ul>
     </nav> 
     <!--header-->
@@ -65,13 +67,15 @@
             </section>
             <!--newsletter signup section-->
             <section class="newsletter-signup">
-                <h2>Sign up for the newsletter (form)</h2>
-                <form action="demo_form.asp" method="get">
-                  <label for="name">Name:</label> <input type="text" name="name"><br>
-                  <label for="email">Email</label> <input type="email" name="email"><br>
-                <button name="submit">
-                      Submit
-                </button>
+                <h2 class="signup__title">Sign up for our newsletter</h2>
+                <form action="demo_form.asp" method="get" class="newsletter-form">
+                    <fieldset class="signup-details">
+                        <label for="name">Name: <input type="text" name="name" class="signup__form-field"></label>
+                        <label for="email">Email: <input type="email" name="email"></label>
+                    </fieldset>
+                    <button name="submit">
+                          Submit
+                    </button>
                 </form>
             </section>
             <!--get involved section-->
@@ -85,18 +89,28 @@
                         <a class="block" href=""><h3>Speak at an event</h3></a>
                     </div>
                     <div class="content-block3">
-                        <a class="block" href=""><h3>Talk to us...</h3></a>
+                        <a class="block" href=""><h3>Sponsor our events</h3></a>
                     </div>
                 </div>
+                <p class="section__body-text">Got a question? Email <a href="mailto:hello@futureinsights.com">hello@futureinsights.com</a> and we&rsquo;ll be happy to help.</p>
             </section>
         </div>
     </main>
     <!--footer-->
     <footer id="footer">
-        <div class="text-group">
-            <h2>Footer</h2>
-            <p>(Include social icons and contact information)</p>
-        </div>
+        <ul class="top-nav">
+            <li><a href="#events">Events</a></li><!--On-page-->
+            <li><a href="">About us</a></li><!--link to FI.com About page-->
+            <li><a href="blog-FOWD-main.html">Blog</a></li>
+            <li><a href="videos-main.html">Videos</a></li><!--link to FI.com Videos page-->
+            <li><a href="speakers-main.html">Community</a></li><!--content library and speaker database-->
+            <li><a href="#footer">Contact us</a></li><!--contact forms-->
+        </ul>
+        <ul class="login">
+            <li class="nav__social-button"><a href=""></a></li>
+            <li class="nav__social-button"><a href=""></a></li>
+            <li class="nav__social-button"><a href=""></a></li>
+        </ul>
     </footer>
 </body>
     
