@@ -8,11 +8,20 @@ h2 {
     font-family: $font-stack1;
     font-size: 2em;
     margin-bottom: .5em;
+    a, a:focus, a:visited, a:hover, a:active {
+        color: $color3;
+    }
 }
 
 h3 {
     font-size: 1.5em;
     margin-bottom: .2em;
+}
+
+h3.sidebar-r__title {
+    margin-top: $small-padding;
+    margin-bottom: $small-padding;
+    color: $color1;
 }
 
 p {

@@ -139,6 +139,12 @@ section.events {
         @include container(1200px);
 }
 
+.wrapper--wide {
+    @include container;
+    @include cf;
+    background-color: $color3;
+}
+
 .content__col--full-1 {
     @include section($small-padding, $small-padding);
     height: 12em;
