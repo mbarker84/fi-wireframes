@@ -1,13 +1,3 @@
-$color1: #999999;
-$color2: #333333;
-$color3: #cccccc;
-$color4: #FFFFFF;
-
-$font-stack1: Helvetica, sans-serif;
-
-$small-padding: 1em;
-$large-padding: 3em;
-
 @mixin section($margin-bottom, $padding: $padding) {
     margin-bottom: $margin-bottom;
     padding: $padding;
@@ -21,4 +11,3 @@ $large-padding: 3em;
         clear: both;
     }
 }
-

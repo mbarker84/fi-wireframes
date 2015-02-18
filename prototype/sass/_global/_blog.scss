@@ -1,19 +1,10 @@
-/* Header */
-
-header.blog-header {
-    height: auto;
-    .blog-header__header-group {
-        text-align: left;
-        margin: 0;
-    }
-}
-
 /* Main content */
 
 .wrapper--wide {
     @include container;
     @include cf;
     background-color: $color3;
+}
     /* Left Sidebar */
     .sidebar-l {
         @include section(0, $small-padding);
@@ -81,64 +72,7 @@ header.blog-header {
             }
         }
     }
-    /* Center content */
-    .content {
-        @include section(0, $small-padding);
-        height: auto;
-        background-color: $color4;
-        @media (min-width: 900px) {
-            @include span(6 of 12);
-        }
-        p {
-            margin-bottom: $small-padding;
-        }
-        .row {
-            @include cf;
-            border-bottom: 2px solid $color3;
-            margin-bottom: $small-padding;
-            padding-bottom: $small-padding;
-        }
-        .row:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .blog-content__img {
-            @include section(0, $small-padding);
-            height: 15em;
-            background-color: $color1;
-            @media (min-width: 700px) {
-                @include span(4 of 12);
-            }
-        }
-        .blog-content__text-block {
-            height: 15em;
-            background-color: $color3;
-            @include section(0, $small-padding);
-            @media (min-width: 700px) {
-                @include span(8 of 12 last);
-            }
-        }
-        .blog-content__author {
-            background-color: $color1;
-            @include section(0, $small-padding);
-            @include cf;
-            .blog-content__author-photo {
-                width: 10em;
-                height: 10em;
-                background-color: $color2;
-                float: left;
-            }
-            .blog-content__author-bio {
-                background-color: $color3;
-                height: 10em;
-                margin-left: 11em;
-            }
-        }
-        .blog-content__pagination {
-            text-align: center;
-        }
-    }
+    
     /* Right sidebar */
     .sidebar-r {
         @include section(0, $small-padding);
@@ -170,4 +104,3 @@ header.blog-header {
             }
         }
     }
-}

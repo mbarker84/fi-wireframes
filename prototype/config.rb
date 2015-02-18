@@ -1,6 +1,8 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 require 'susy'
+# https://github.com/chriseppstein/sass-globbing – import multiple Sass files in single statement
+require 'sass-globbing' 
 
 # Set this to the root of your project when deployed:
 http_path = "/"

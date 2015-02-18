@@ -1,4 +1,4 @@
-/* Nav */
+/* Top level nav */
 
 nav {
     @include container;
@@ -42,3 +42,17 @@ nav {
             }
         }
     }
+
+/* Sub nav for content pages */
+
+ul.content__sub-nav {
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-right: $small-padding;
+        color: $color3;
+    }
+    li.current {
+        color: $color2;
+    }
+}

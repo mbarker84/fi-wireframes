@@ -1,15 +1,3 @@
-ul.content__sub-nav {
-    list-style: none;
-    li {
-        display: inline-block;
-        margin-right: $small-padding;
-        color: $color3;
-    }
-    li.current {
-        color: $color2;
-    }
-}
-
 ul.content__gallery {
     @include cf;
     list-style: none;
@@ -35,26 +23,5 @@ ul.content__gallery {
     }
     li.locked {
         background-color: $color3;
-    }
-}
-
-.content__signup {
-    @include section(0, $small-padding);
-    background-color: $color2;
-    color: $color4;
-    min-height: 5em;
-}
-
-.content__signup--top {
-    @include section($small-padding, $small-padding);
-    background-color: $color2;
-    color: $color4;
-    min-height: 5em;
-}
-
-button.content__button {
-    margin-bottom: $small-padding;
-    @media (min-width: 700px) {
-        margin-bottom: 0;
     }
 }

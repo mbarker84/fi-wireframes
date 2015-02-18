@@ -5,14 +5,12 @@
 
 @import "compass/reset";
 @import "susy";
+
+/* Variables and mixins */
+@import '_variables.scss';
+@import '_mixins.scss';
 /* Partials */
-@import "variables";
-@import "fonts";
-@import "blog";
-@import "about";
-@import "videos";
-@import "speakers";
-@import "nav";
+@import '_global/*.scss';
 
 $susy: (
     columns: 12,
@@ -37,41 +35,6 @@ a.block {
     &:hover {
         color: $color2;
     }
-}
-
-
-/* Header */
-
-header {
-    height: 25em;
-    background-color: $color1;
-    text-align: center;
-    position: relative;
-    @media (min-width: 700px) {
-        height: 40em;
-    }
-    @include section(0, $small-padding);
-    .header-group {
-        position: relative;
-        top: 20%;
-        @media (min-width: 700px) {
-            top: 40%;
-        }
-    }
-    .header__button {
-        background-color: $color2;
-        border: none;
-        border-radius: .2em;
-        padding: $small-padding;
-        color: $color4;
-        font-family: $font-stack1;
-        font-size: 1.2em;
-    }
-}
-
-h2.header--secondary {
-    margin-top: $small-padding;
-    text-align: left;
 }
 
 
@@ -137,6 +100,7 @@ button.sidebar__button {
 section.events {
     background-color: $color4;
     @include section($small-padding, $small-padding);
+    padding-bottom: 0;
     ul.events-section__list {
         list-style: none;
         @include cf;
