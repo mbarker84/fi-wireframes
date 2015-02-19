@@ -171,6 +171,96 @@ p.section__body-text a {
   color: #999999;
 }
 
+/* Newsletter signup */
+/* line 3, ../sass/_global/_forms.scss */
+h2.signup__title {
+  color: #cccccc;
+}
+
+/* line 7, ../sass/_global/_forms.scss */
+form {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+form:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 8, ../sass/_mixins.scss */
+form:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 10, ../sass/_global/_forms.scss */
+form fieldset {
+  color: #FFFFFF;
+}
+/* line 8, ../sass/_mixins.scss */
+form fieldset:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 13, ../sass/_global/_forms.scss */
+form fieldset label {
+  text-align: left;
+  width: 100%;
+  float: left;
+}
+@media (min-width: 700px) {
+  /* line 13, ../sass/_global/_forms.scss */
+  form fieldset label {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (min-width: 700px) {
+  /* line 20, ../sass/_global/_forms.scss */
+  form fieldset label:last-child {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 25, ../sass/_global/_forms.scss */
+form fieldset label input {
+  margin: 0.5em 0 1em 0;
+  width: 100%;
+  font-size: 1.2em;
+  padding: .3em;
+}
+/* line 32, ../sass/_global/_forms.scss */
+form fieldset input.radio {
+  margin-left: 2em;
+}
+/* line 34, ../sass/_global/_forms.scss */
+form fieldset input.radio:first-child {
+  margin-left: 0;
+}
+/* line 39, ../sass/_global/_forms.scss */
+form p, form p.subtitle {
+  color: #cccccc;
+}
+/* line 42, ../sass/_global/_forms.scss */
+form fieldset.event-selection {
+  margin-top: .8em;
+  margin-bottom: .8em;
+}
+/* line 46, ../sass/_global/_forms.scss */
+form button {
+  padding: 0.6em 1em 0.4em 1em;
+  border-radius: .2em;
+  border: none;
+  font-size: 1.2em;
+  margin-top: 0;
+  cursor: pointer;
+}
+
 /* Homepage header */
 /* line 3, ../sass/_global/_header.scss */
 header {
@@ -413,22 +503,33 @@ nav:after {
 /* line 9, ../sass/_global/_nav.scss */
 ul.top-nav, ul.login {
   list-style: none;
-}
-/* line 11, ../sass/_global/_nav.scss */
-ul.top-nav li, ul.login li {
-  display: inline-block;
-  margin-right: 1em;
-  color: #FFFFFF;
   font-family: Helvetica, sans-serif;
-  padding-top: .8em;
 }
-
-/* line 19, ../sass/_global/_nav.scss */
-ul.top-nav {
+/* line 12, ../sass/_global/_nav.scss */
+ul.top-nav li, ul.login li {
   display: none;
 }
 @media (min-width: 700px) {
-  /* line 19, ../sass/_global/_nav.scss */
+  /* line 12, ../sass/_global/_nav.scss */
+  ul.top-nav li, ul.login li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1em;
+    color: #FFFFFF;
+    padding-top: .8em;
+  }
+}
+/* line 22, ../sass/_global/_nav.scss */
+ul.top-nav li.current, ul.login li.current {
+  text-decoration: none;
+}
+
+/* line 26, ../sass/_global/_nav.scss */
+ul.top-nav {
+  position: relative;
+}
+@media (min-width: 700px) {
+  /* line 26, ../sass/_global/_nav.scss */
   ul.top-nav {
     display: block;
     width: 66.10169%;
@@ -440,23 +541,19 @@ ul.top-nav {
   }
 }
 
-/* line 29, ../sass/_global/_nav.scss */
-ul.login {
-  display: none;
-}
 @media (min-width: 700px) {
-  /* line 29, ../sass/_global/_nav.scss */
+  /* line 36, ../sass/_global/_nav.scss */
   ul.login {
     display: block;
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 34, ../sass/_global/_nav.scss */
+  /* line 40, ../sass/_global/_nav.scss */
   ul.login li {
     float: right;
   }
-  /* line 37, ../sass/_global/_nav.scss */
+  /* line 43, ../sass/_global/_nav.scss */
   ul.login li.nav__social-button {
     width: 2.5em;
     height: 2.5em;
@@ -465,18 +562,65 @@ ul.login {
   }
 }
 
+/* Top-level sub navigation */
+@media (min-width: 700px) {
+  /* line 56, ../sass/_global/_nav.scss */
+  ul.top-nav li ul {
+    position: absolute;
+    display: none;
+    padding-top: 1em;
+  }
+  /* line 60, ../sass/_global/_nav.scss */
+  ul.top-nav li ul li {
+    display: block;
+    width: 10em;
+    padding: 1em;
+    background-color: #333333;
+  }
+  /* line 65, ../sass/_global/_nav.scss */
+  ul.top-nav li ul li a:hover {
+    color: #999999;
+  }
+  /* line 70, ../sass/_global/_nav.scss */
+  ul.top-nav li:hover ul {
+    display: block;
+    z-index: 100;
+  }
+}
+/* Mobile navigation */
+/* line 80, ../sass/_global/_nav.scss */
+ul.top-nav--mobile {
+  font-family: Helvetica, sans-serif;
+  color: #999999;
+}
+@media (min-width: 700px) {
+  /* line 80, ../sass/_global/_nav.scss */
+  ul.top-nav--mobile {
+    display: none;
+  }
+}
+/* line 86, ../sass/_global/_nav.scss */
+ul.top-nav--mobile li {
+  display: none;
+}
+/* line 89, ../sass/_global/_nav.scss */
+ul.top-nav--mobile:hover li {
+  display: block;
+  padding: .8em;
+}
+
 /* Sub nav for content pages */
-/* line 48, ../sass/_global/_nav.scss */
+/* line 97, ../sass/_global/_nav.scss */
 ul.content__sub-nav {
   list-style: none;
 }
-/* line 50, ../sass/_global/_nav.scss */
+/* line 99, ../sass/_global/_nav.scss */
 ul.content__sub-nav li {
   display: inline-block;
   margin-right: 1em;
   color: #cccccc;
 }
-/* line 55, ../sass/_global/_nav.scss */
+/* line 104, ../sass/_global/_nav.scss */
 ul.content__sub-nav li.current {
   color: #333333;
 }
@@ -723,7 +867,6 @@ main {
 main section {
   margin-bottom: 1em;
   padding: 1em;
-  text-align: center;
 }
 /* line 8, ../sass/_mixins.scss */
 main section:after {
@@ -731,24 +874,28 @@ main section:after {
   display: block;
   clear: both;
 }
-/* line 51, ../sass/screen.scss */
-main section.get-involved {
+/* line 49, ../sass/screen.scss */
+main section h2 {
+  text-align: center;
+}
+/* line 53, ../sass/screen.scss */
+main section.events, main section.get-involved, main section.news, main section.about {
   background-color: #FFFFFF;
 }
-/* line 54, ../sass/screen.scss */
-main section.news {
-  background-color: #FFFFFF;
+/* line 56, ../sass/screen.scss */
+main section.events {
+  padding-bottom: 0;
 }
-/* line 57, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 main section.newsletter-signup {
   background-color: #333333;
 }
-/* line 60, ../sass/screen.scss */
-main section.get-involved, main section.faq {
+/* line 62, ../sass/screen.scss */
+main section.last {
   margin-bottom: 0;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .row {
   max-width: 100%;
   margin-left: auto;
@@ -766,7 +913,7 @@ main section.get-involved, main section.faq {
   display: block;
   clear: both;
 }
-/* line 68, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .row .content-block1, .row .content-block2, .row .content-block3 {
   height: 15em;
   background-color: #999999;
@@ -774,14 +921,14 @@ main section.get-involved, main section.faq {
   padding: 1em;
 }
 @media (min-width: 700px) {
-  /* line 74, ../sass/screen.scss */
+  /* line 76, ../sass/screen.scss */
   .row .content-block1, .row .content-block2 {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     margin-bottom: 0;
   }
-  /* line 78, ../sass/screen.scss */
+  /* line 80, ../sass/screen.scss */
   .row .content-block3 {
     width: 32.20339%;
     float: right;
@@ -790,7 +937,7 @@ main section.get-involved, main section.faq {
   }
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 button.content__button {
   background-color: #999999;
   border: none;
@@ -800,72 +947,14 @@ button.content__button {
   font-size: 1.2em;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 button.sidebar__button {
   margin-bottom: 1em;
   width: 100%;
 }
 
-/* Events section */
-/* line 100, ../sass/screen.scss */
-section.events {
-  background-color: #FFFFFF;
-  margin-bottom: 1em;
-  padding: 1em;
-  padding-bottom: 0;
-}
-/* line 104, ../sass/screen.scss */
-section.events ul.events-section__list {
-  list-style: none;
-}
-/* line 8, ../sass/_mixins.scss */
-section.events ul.events-section__list:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-/* line 107, ../sass/screen.scss */
-section.events ul.events-section__list li {
-  width: 49.15254%;
-  float: left;
-  margin-right: 1.69492%;
-  margin-bottom: 1.69492%;
-  padding: 1em;
-  display: inline-block;
-  height: 8em;
-  background-color: #999999;
-  font-family: Helvetica, sans-serif;
-}
-@media (max-width: 699px) {
-  /* line 117, ../sass/screen.scss */
-  section.events ul.events-section__list li:nth-child(2), section.events ul.events-section__list li:nth-child(4), section.events ul.events-section__list li:last-child {
-    width: 49.15254%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 700px) {
-  /* line 122, ../sass/screen.scss */
-  section.events ul.events-section__list li {
-    width: 32.20339%;
-    float: left;
-    margin-right: 1.69492%;
-    height: 10em;
-  }
-  /* line 126, ../sass/screen.scss */
-  section.events ul.events-section__list li:nth-child(3), section.events ul.events-section__list li:last-child {
-    width: 32.20339%;
-    float: right;
-    margin-right: 0;
-  }
-  /* line 129, ../sass/screen.scss */
-  section.events ul.events-section__list li:nth-child(4), section.events ul.events-section__list li:nth-child(5), section.events ul.events-section__list li:nth-child(6) {
-    margin-bottom: 0;
-  }
-}
-
 /* General content */
-/* line 138, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .wrapper {
   max-width: 1200px;
   margin-left: auto;
@@ -878,7 +967,7 @@ section.events ul.events-section__list li {
   clear: both;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .wrapper--wide {
   max-width: 100%;
   margin-left: auto;
@@ -898,7 +987,7 @@ section.events ul.events-section__list li {
   clear: both;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .content__col--full-1 {
   margin-bottom: 1em;
   padding: 1em;
@@ -906,13 +995,13 @@ section.events ul.events-section__list li {
   background-color: #999999;
 }
 @media (min-width: 700px) {
-  /* line 148, ../sass/screen.scss */
+  /* line 112, ../sass/screen.scss */
   .content__col--full-1 {
     height: 20em;
   }
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .content__col--full-2 {
   margin-bottom: 0;
   padding: 1em;
@@ -920,7 +1009,7 @@ section.events ul.events-section__list li {
   background-color: #cccccc;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .content__col--full-2-long {
   margin-bottom: 0;
   padding: 1em;
@@ -928,89 +1017,8 @@ section.events ul.events-section__list li {
   background-color: #cccccc;
 }
 
-/* Newsletter signup */
-/* line 171, ../sass/screen.scss */
-h2.signup__title {
-  color: #cccccc;
-}
-
-/* line 175, ../sass/screen.scss */
-form {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
-form:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-/* line 8, ../sass/_mixins.scss */
-form:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-@media (min-width: 700px) {
-  /* line 178, ../sass/screen.scss */
-  form fieldset {
-    width: 83.05085%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-}
-/* line 182, ../sass/screen.scss */
-form fieldset label {
-  color: #FFFFFF;
-  text-align: left;
-  width: 100%;
-  float: left;
-}
-@media (min-width: 700px) {
-  /* line 182, ../sass/screen.scss */
-  form fieldset label {
-    width: 49.15254%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-}
-@media (min-width: 700px) {
-  /* line 190, ../sass/screen.scss */
-  form fieldset label:last-child {
-    width: 49.15254%;
-    float: right;
-    margin-right: 0;
-  }
-}
-/* line 195, ../sass/screen.scss */
-form fieldset label input {
-  margin: 0.5em 0 1em 0;
-  width: 100%;
-  font-size: 1.2em;
-  padding: .3em;
-}
-/* line 203, ../sass/screen.scss */
-form button {
-  padding: 0.6em 1em 0.4em 1em;
-  border-radius: .2em;
-  border: none;
-  font-size: 1.2em;
-  margin-top: 0;
-  cursor: pointer;
-}
-@media (min-width: 700px) {
-  /* line 203, ../sass/screen.scss */
-  form button {
-    width: 15.25424%;
-    float: right;
-    margin-right: 0;
-    margin-top: 1.2em;
-  }
-}
-
 /* Footer */
-/* line 219, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 footer {
   margin-bottom: 1em;
   padding: 1em;

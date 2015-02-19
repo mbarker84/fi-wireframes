@@ -1,0 +1,54 @@
+/* Newsletter signup */
+
+h2.signup__title {
+    color: $color3;
+}
+
+form {
+    @include container(12);
+    @include cf;
+    fieldset {
+        color: $color4;
+        @include cf;
+        label {
+            text-align: left;
+            width: 100%;
+            float: left;
+            @media (min-width: 700px) {
+                @include span(6 of 12);
+            }
+            &:last-child {
+                @media (min-width: 700px) {
+                    @include span(6 of 12 last);
+                }
+            }
+            input {
+                margin: .5em 0 $small-padding 0;
+                width: 100%;
+                font-size: 1.2em;
+                padding: .3em;
+            }
+        }
+        input.radio {
+            margin-left: 2em;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    p {
+        color: $color3;
+    }
+    fieldset.event-selection {
+        margin-top: .8em;
+        margin-bottom: .8em;
+    }
+    button {
+        padding: .6em $small-padding .4em $small-padding;
+        border-radius: .2em;
+        border: none;
+        font-size: 1.2em;
+        margin-top: 0;
+        cursor: pointer;
+    }
+}

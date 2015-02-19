@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Future of Web Design | Home</title>
+    <title>Future Insights | Home</title>
     <link href="../stylesheets/screen.css" rel="stylesheet" type="text/css" />
 </head>
     
@@ -14,14 +14,14 @@
     <nav>
         <!--mobile nav-->
         <ul class="top-nav--mobile">Menu
-            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#">Explore</a>
-                <ul>
-                    <li><a href="blog-FOWD-main.html">Blog</a></li>
-                    <li><a href="videos-main.html">Videos</a></li>
-                    <li><a href="speakers-main.html">Speaker library</a></li>
-                </ul>
+            <ul>
+                <li><a href="blog-FOWD-main.html">Blog</a></li>
+                <li><a href="videos-main.html">Videos</a></li>
+                <li><a href="speakers-main.html">Speaker library</a></li>
+            </ul>
             </li>
             <li><a href="">Get involved</a>
                 <ul>
@@ -34,14 +34,14 @@
         </ul>
         <!--desktop nav-->
         <ul class="top-nav">
-            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#">Explore</a>
-                <ul>
-                    <li><a href="blog-FOWD-main.html">Blog</a></li>
-                    <li><a href="videos-main.html">Videos</a></li>
-                    <li><a href="speakers-main.html">Speaker library</a></li>
-                </ul>
+            <ul>
+                <li><a href="blog-FOWD-main.html">Blog</a></li>
+                <li><a href="videos-main.html">Videos</a></li>
+                <li><a href="speakers-main.html">Speaker library</a></li>
+            </ul>
             </li>
             <li><a href="">Get involved</a>
                 <ul>
@@ -56,13 +56,13 @@
             <li class="nav__social-button"><a href=""></a></li>
             <li class="nav__social-button"><a href=""></a></li>
             <li class="nav__social-button"><a href=""></a></li>
-            <li><a href="">Login / Sign Up</a></li>
         </ul>
     </nav>
+    
     <!--header-->
     <header>
         <div class="header-group">
-            <h1>Future of Web Design</h1>
+            <h1>Future Insights</h1>
             <p class="subtitle">Connecting the creators and builders of tomorrow&rsquo;s web</p>
             <a class="header__button" href="#events">See our events</a>
         </div>
@@ -79,44 +79,16 @@
             <section id="events" class="events">
                 <h2>Our Events</h2>
                 <ul class="content__gallery">
-                    <li><a class="block" href="http://futureofwebdesign.com/london-2015">London</a></li>
-                    <li><a class="block" href="http://futureofwebdesign.com/nyc-2015">NYC</a></li>
-                    <li><a class="block" href="http://futureofwebdesign.com/sf-2015">SF</a></li>
+                    <li><a class="block" href="index.html">FOWD</a></li>
+                    <li><a class="block" href="index.html">FOWA</a></li>
                     <li><a class="block" href="http://futureinsightslive.com">FI Live</a></li>
+                    <li><a class="block" href="http://ultimatedeveloperevent.com">UDE</a></li>
                     <li><a class="block" href="http://refreshboston.com/">Refresh Boston</a></li>
                     <li><a class="block" href="http://londonweb.org">London Web</a></li>
                 </ul>
             </section>
-            <!--NEWS section-->
-            <section class="news">
-                <h2>Latest News</h2>
-                <div class="row">
-                    <div class="content-block1">
-                        <a class="block" href="subpages/blog-single-page.html"><h3>Article</h3></a>
-                    </div>
-                    <div class="content-block2">
-                        <a class="block" href="subpages/speaker-single-page.html"><h3>Speaker</h3></a>
-                    </div>
-                    <div class="content-block3">
-                        <a class="block" href="subpages/video-single-page.html"><h3>Video</h3></a>
-                    </div>
-                </div>
-            </section>
-            <!--newsletter signup section-->
-            <section class="newsletter-signup">
-                <h2 class="signup__title">Sign up for our newsletter</h2>
-                <form action="demo_form.asp" method="get" class="newsletter-form">
-                    <fieldset class="signup-details">
-                        <label for="name">Name: <input type="text" name="name" class="signup__form-field"></label>
-                        <label for="email">Email: <input type="email" name="email"></label>
-                    </fieldset>
-                    <button name="submit">
-                          Submit
-                    </button>
-                </form>
-            </section>
             <!--get involved section-->
-            <section class="get-involved last">
+            <section class="get-involved">
                 <h2>Get Involved</h2>
                 <div class="row">
                     <div class="content-block1">
@@ -130,6 +102,25 @@
                     </div>
                 </div>
                 <p class="section__body-text">Got a question? Email <a href="mailto:hello@futureinsights.com">hello@futureinsights.com</a> and we&rsquo;ll be happy to help.</p>
+            </section>
+            <!--newsletter signup section-->
+            <section class="newsletter-signup last">
+                <h2 class="signup__title">Sign up for our newsletter</h2>
+                <form action="demo_form.asp" method="get" class="newsletter-form">
+                    <fieldset class="signup-details">
+                        <label for="name">Name: <input type="text" name="name" class="signup__form-field"></label>
+                        <label for="email">Email: <input type="email" name="email"></label>
+                    </fieldset>
+                    <p>Which newsletter?</p>
+                    <fieldset class="event-selection">
+                        <input class="radio" type="radio" name="newsletter" value="Designers" checked> Designers
+                        <input class="radio" type="radio" name="newsletter" value="Developers"> Developers
+                        <input class="radio" type="radio" name="newsletter" value="All"> All
+                    </fieldset>
+                    <button name="submit">
+                          Submit
+                    </button>
+                </form>
             </section>
         </div>
     </main>

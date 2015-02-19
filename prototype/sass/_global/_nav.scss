@@ -8,16 +8,23 @@ nav {
 }
     ul.top-nav, ul.login {
         list-style: none;
+        font-family: $font-stack1;
         li {
-            display: inline-block;
-            margin-right: $small-padding;
-            color: $color4;
-            font-family: $font-stack1;
-            padding-top: .8em;
+            display: none;
+            @media (min-width: 700px) {
+                display: inline-block;
+                position: relative;
+                margin-right: $small-padding;
+                color: $color4;
+                padding-top: .8em;
+            }
+        }
+        li.current {
+            text-decoration: none;
         }
     }
     ul.top-nav {
-        display: none;
+        position: relative;
         @media (min-width: 700px) {
             display: block;
             @include span(8 of 12);
@@ -27,7 +34,6 @@ nav {
         }
     }
     ul.login {
-        display: none;
         @media (min-width: 700px) {
             display: block;
             @include span(4 of 12 last);
@@ -42,6 +48,49 @@ nav {
             }
         }
     }
+
+/* Top-level sub navigation */
+@media (min-width: 700px) {
+    ul.top-nav {
+        li {
+            ul {
+                position: absolute;
+                display: none; 
+                padding-top: 1em;
+                li {
+                    display: block;
+                    width: 10em;
+                    padding: $small-padding;
+                    background-color: $color2;
+                    a:hover {
+                        color: $color1;
+                    }
+                }
+            }
+            &:hover ul {
+                display: block;
+                z-index: 100;
+            }
+        }
+    }
+ 
+}
+
+/* Mobile navigation */
+ul.top-nav--mobile {
+    font-family: $font-stack1;
+    color: $color1;
+    @media (min-width: 700px) {
+        display: none;
+    }
+    li {
+        display: none;
+    }
+    &:hover li {
+        display: block;
+        padding: .8em;
+    }
+}
 
 /* Sub nav for content pages */
 
