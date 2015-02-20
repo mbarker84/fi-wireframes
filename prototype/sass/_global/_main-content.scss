@@ -57,6 +57,14 @@
         }
     }
 
+.content__sub-nav {
+    li {
+        h3 {
+            margin-bottom: $small-padding;
+        }
+    }
+}
+
 /* Content - general */
 
 .content__col--left {

@@ -16,9 +16,9 @@ h2 {
 h3 {
     font-size: 1.5em;
     margin-bottom: .2em;
+    font-family: $font-stack1;
 }
-
-h3.sidebar-r__title {
+h3.sidebar-r__title, h3.footer {
     margin-top: $small-padding;
     margin-bottom: $small-padding;
     color: $color1;
@@ -27,6 +27,7 @@ h3.sidebar-r__title {
 p {
     font-family: $font-stack1;
     font-size: 1em;
+    line-height: 1.4;
 }
 p.subtitle {
     @extend p;
@@ -37,5 +38,12 @@ p.section__body-text {
     text-align: left;
     a {
         color: $color1;
+    }
+}
+p.footer {
+    color: $color1;
+    margin-bottom: $small-padding;
+    @media (min-width: 700px) {
+        @include span(6 of 12);
     }
 }

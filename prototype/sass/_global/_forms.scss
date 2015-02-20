@@ -52,3 +52,26 @@ form {
         cursor: pointer;
     }
 }
+
+/* Membership */
+
+.content__signup {
+    @include section(0, $small-padding);
+    background-color: $color2;
+    color: $color4;
+    min-height: 5em;
+}
+
+.content__signup--top {
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    color: $color4;
+    min-height: 5em;
+}
+
+button.content__button {
+    margin-bottom: $small-padding;
+    @media (min-width: 700px) {
+        margin-bottom: 0;
+    }
+}

@@ -12,18 +12,51 @@
 <body>
     <!--nav-->
     <nav>
+        <!--mobile nav-->
+        <ul class="top-nav--mobile">Menu
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#events">Events</a></li>
+            <li><a href="#">Explore</a>
+            <ul>
+                <li class="current"><a href="../blog-FOWD-main.html">Blog</a></li>
+                <li><a href="../videos-main.html">Videos</a></li>
+                <li><a href="../speakers-main.html">Speaker library</a></li>
+            </ul>
+            </li>
+            <li><a href="">Get involved</a>
+                <ul>
+                    <li><a href="">Write</a></li>
+                    <li><a href="">Speak</a></li>
+                    <li><a href="">Sponsor</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+        <!--desktop nav-->
         <ul class="top-nav">
-            <li><a href="../index.html#events">Events</a></li><!--On-page-->
-            <li><a href="">About us</a></li><!--link to FI.com About page-->
-            <li><a href="../blog-FOWD-main.html">Blog</a></li>
-            <li><a href="../videos-main.html">Videos</a></li><!--link to FI.com Videos page-->
-            <li><a href="../speakers-main.html">Community</a></li><!--content library and speaker database-->
-            <li><a href="#footer">Contact us</a></li><!--contact forms-->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#events">Events</a></li>
+            <li><a href="#">Explore</a>
+            <ul>
+                <li><a href="../blog-FOWD-main.html">Blog</a></li>
+                <li><a href="../videos-main.html">Videos</a></li>
+                <li><a href="../speakers-main.html">Speaker library</a></li>
+            </ul>
+            </li>
+            <li><a href="">Get involved</a>
+                <ul>
+                    <li><a href="">Write</a></li>
+                    <li><a href="">Speak</a></li>
+                    <li><a href="">Sponsor</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact us</a></li>
         </ul>
         <ul class="login">
             <li class="nav__social-button"><a href=""></a></li>
             <li class="nav__social-button"><a href=""></a></li>
             <li class="nav__social-button"><a href=""></a></li>
+            <li><a href="">Login / Sign Up</a></li>
         </ul>
     </nav>  
     <!--header-->
@@ -48,13 +81,13 @@
                     <li>Browse speakers / contributors...
                         <div class="row">
                             <div class="blog-sidebar__speaker">
-                                <a class="block" href="subpages/speaker-single-page.html">1</a>
+                                <a class="block" href="speaker-single-page.html">1</a>
                             </div>
                             <div class="blog-sidebar__speaker">
-                                <a class="block" href="subpages/speaker-single-page.html">2</a>
+                                <a class="block" href="speaker-single-page.html">2</a>
                             </div>
                             <div class="blog-sidebar__speaker">
-                                <a class="block" href="subpages/speaker-single-page.html">3</a>
+                                <a class="block" href="speaker-single-page.html">3</a>
                             </div>
                         </div>
                         <button class="blog-sidebar__button"><a href="../speakers-main.html">View all</a></button>
@@ -119,19 +152,22 @@
     </main>
     <!--footer-->
     <footer id="footer">
-        <ul class="top-nav">
-            <li><a href="../index.html#events">Events</a></li><!--On-page-->
-            <li><a href="">About us</a></li><!--link to FI.com About page-->
-            <li><a href="../blog-FOWD-main.html">Blog</a></li>
-            <li><a href="../videos-main.html">Videos</a></li><!--link to FI.com Videos page-->
-            <li><a href="../speakers-main.html">Community</a></li><!--content library and speaker database-->
-            <li><a href="#footer">Contact us</a></li><!--contact forms-->
-        </ul>
-        <ul class="login">
-            <li class="nav__social-button"><a href=""></a></li>
-            <li class="nav__social-button"><a href=""></a></li>
-            <li class="nav__social-button"><a href=""></a></li>
-        </ul>
+        <div class="wrapper">
+            <section class="footer__section">
+                <ul class="top-nav">
+                </ul>
+                <ul class="login">
+                    <li class="nav__social-button"><a href=""></a></li>
+                    <li class="nav__social-button"><a href=""></a></li>
+                    <li class="nav__social-button"><a href=""></a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer">About us</h3>
+                <p class="footer">Future of Web Design is produced by <a href="about.html">Future Insights</a>. We pride ourselves in creating awesome events for designers, developers and anyone working to make the web a better place. <a href="about.html">Find out more</a> about who we are and what we do.</p>
+                <p class="footer">Get in touch: <a href="mailto:hello@futureinsights.com">hello@futureinsights.com</a></p>
+            </section>
+        </div>
     </footer>
 </body>
     
