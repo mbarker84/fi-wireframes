@@ -1,0 +1,43 @@
+/* Homepage header */
+
+header {
+    height: 25em;
+    background-color: $color1;
+    text-align: center;
+    position: relative;
+    @media (min-width: 700px) {
+        height: 40em;
+    }
+    @include section(0, $small-padding);
+    .header-group {
+        position: relative;
+        top: 20%;
+        @media (min-width: 700px) {
+            top: 40%;
+        }
+    }
+    .header__button {
+        background-color: $color2;
+        border: none;
+        border-radius: .2em;
+        padding: $small-padding;
+        color: $color4;
+        font-family: $font-stack1;
+        font-size: 1.2em;
+    }
+}
+
+h2.header--secondary {
+    margin-top: $small-padding;
+    text-align: left;
+}
+
+/* General/blog header */
+
+header.blog-header {
+    height: auto;
+    .blog-header__header-group {
+        text-align: left;
+        margin: 0;
+    }
+}

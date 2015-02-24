@@ -82,6 +82,15 @@ ul.top-nav--mobile {
     }
     li {
         display: none;
+        ul.top-nav__sub {
+            li.top-nav__sub--item {
+                display: none;
+            }
+        }
+        &:hover ul.top-nav__sub li.top-nav__sub--item {
+            display: block;
+            background-color: $color1;
+        }
     }
     &:hover li {
         display: block;
@@ -90,13 +99,15 @@ ul.top-nav--mobile {
 }
 
 /* Sub nav for content pages */
-
 ul.content__sub-nav {
     list-style: none;
     li {
         display: inline-block;
         margin-right: $small-padding;
-        color: $color3;
+        color: $color2;
+        a {
+            color: $color3;
+        }
     }
     li.current {
         color: $color2;

@@ -460,28 +460,23 @@ header.blog-header .blog-header__header-group {
   text-align: center;
 }
 
-/* line 62, ../sass/_global/_main-content.scss */
-.content__sub-nav li h3 {
-  margin-bottom: 1em;
-}
-
 /* Content - general */
 @media (min-width: 700px) {
-  /* line 70, ../sass/_global/_main-content.scss */
+  /* line 62, ../sass/_global/_main-content.scss */
   .content__col--left {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
 }
-/* line 74, ../sass/_global/_main-content.scss */
+/* line 66, ../sass/_global/_main-content.scss */
 .content__col--left .content__img--full {
   margin-bottom: 1em;
   padding: 1em;
   height: 15em;
   background-color: #999999;
 }
-/* line 79, ../sass/_global/_main-content.scss */
+/* line 71, ../sass/_global/_main-content.scss */
 .content__col--left .content__contact-info {
   margin-bottom: 1em;
   padding: 1em;
@@ -489,7 +484,7 @@ header.blog-header .blog-header__header-group {
   background-color: #cccccc;
 }
 
-/* line 86, ../sass/_global/_main-content.scss */
+/* line 78, ../sass/_global/_main-content.scss */
 .content__text-block--right {
   margin-bottom: 0;
   padding: 1em;
@@ -497,7 +492,7 @@ header.blog-header .blog-header__header-group {
   background-color: #cccccc;
 }
 @media (min-width: 700px) {
-  /* line 86, ../sass/_global/_main-content.scss */
+  /* line 78, ../sass/_global/_main-content.scss */
   .content__text-block--right {
     width: 66.10169%;
     float: right;
@@ -505,13 +500,13 @@ header.blog-header .blog-header__header-group {
   }
 }
 
-/* line 94, ../sass/_global/_main-content.scss */
+/* line 86, ../sass/_global/_main-content.scss */
 .short {
   height: 10em;
   margin-bottom: 0;
 }
 
-/* line 99, ../sass/_global/_main-content.scss */
+/* line 91, ../sass/_global/_main-content.scss */
 .content__text-block--right-secondary {
   height: 10em;
   background-color: #cccccc;
@@ -520,7 +515,7 @@ header.blog-header .blog-header__header-group {
   padding: 1em;
 }
 @media (min-width: 700px) {
-  /* line 99, ../sass/_global/_main-content.scss */
+  /* line 91, ../sass/_global/_main-content.scss */
   .content__text-block--right-secondary {
     width: 66.10169%;
     float: right;
@@ -651,23 +646,36 @@ ul.top-nav--mobile li {
   display: none;
 }
 /* line 86, ../sass/_global/_nav.scss */
+ul.top-nav--mobile li ul.top-nav__sub li.top-nav__sub--item {
+  display: none;
+}
+/* line 90, ../sass/_global/_nav.scss */
+ul.top-nav--mobile li:hover ul.top-nav__sub li.top-nav__sub--item {
+  display: block;
+  background-color: #999999;
+}
+/* line 95, ../sass/_global/_nav.scss */
 ul.top-nav--mobile:hover li {
   display: block;
   padding: .8em;
 }
 
 /* Sub nav for content pages */
-/* line 94, ../sass/_global/_nav.scss */
+/* line 102, ../sass/_global/_nav.scss */
 ul.content__sub-nav {
   list-style: none;
 }
-/* line 96, ../sass/_global/_nav.scss */
+/* line 104, ../sass/_global/_nav.scss */
 ul.content__sub-nav li {
   display: inline-block;
   margin-right: 1em;
+  color: #333333;
+}
+/* line 108, ../sass/_global/_nav.scss */
+ul.content__sub-nav li a {
   color: #cccccc;
 }
-/* line 101, ../sass/_global/_nav.scss */
+/* line 112, ../sass/_global/_nav.scss */
 ul.content__sub-nav li.current {
   color: #333333;
 }

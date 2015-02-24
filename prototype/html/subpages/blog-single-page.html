@@ -14,20 +14,26 @@
     <nav>
         <!--mobile nav-->
         <ul class="top-nav--mobile">Menu
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#events">Events</a></li>
+            <li><a href="about.html">Home</a></li>
+            <li><a href="about.html#events">Events</a>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="index.html">FOWD</a></li>
+                    <li class="top-nav__sub--item"><a href="index.html">FOWA</a></li>
+                    <li class="top-nav__sub--item"><a href="index.html#events">All...</a></li>
+                </ul>
+            </li>
             <li><a href="#">Explore</a>
-            <ul>
-                <li class="current"><a href="blog-FOWD-main.html">Blog</a></li>
-                <li><a href="videos-main.html">Videos</a></li>
-                <li><a href="speakers-main.html">Speaker library</a></li>
-            </ul>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="blog-FOWD-main.html">Blog</a></li>
+                    <li class="top-nav__sub--item"><a href="#">Videos</a></li>
+                    <li class="top-nav__sub--item"><a href="speakers-main.html">Speaker library</a></li>
+                </ul>
             </li>
             <li><a href="">Get involved</a>
-                <ul>
-                    <li><a href="">Write</a></li>
-                    <li><a href="">Speak</a></li>
-                    <li><a href="">Sponsor</a></li>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="">Write</a></li>
+                    <li class="top-nav__sub--item"><a href="">Speak</a></li>
+                    <li class="top-nav__sub--item"><a href="">Sponsor</a></li>
                 </ul>
             </li>
             <li><a href="">Contact us</a></li>
@@ -35,7 +41,13 @@
         <!--desktop nav-->
         <ul class="top-nav">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#events">Events</a></li>
+            <li><a href="#">Events</a>
+                <ul>
+                    <li><a href="index.html">FOWD</a></li>
+                    <li><a href="index.html">FOWA</a></li>
+                    <li><a href="index.html#events">All...</a></li>
+                </ul>
+            </li>
             <li><a href="#">Explore</a>
             <ul>
                 <li><a href="../blog-FOWD-main.html">Blog</a></li>
@@ -90,7 +102,6 @@
     <header class="blog-header">
         <div class="blog-header__header-group">
             <h1><a class="home" href="../index.html">Future of Web Design</a></h1>
-            <p>Optional strapline</p>
         </div>
         <!--secondary header-->
         <h2 class="header--secondary">Blog</h2>
@@ -141,22 +152,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h3>Discover more...</h3>
+                    <h3>You might also like...</h3>
                     <div class="content-block1">
-                        <h3><a href="video-single-page.html">Video 1</a></h3>
+                        <a class="block" href="video-single-page.html">Video 3</a>
                     </div>
                     <div class="content-block2">
-                        <h3><a href="video-single-page.html">Video 2</a></h3>
+                        <a class="block" href="video-single-page.html">Video 3</a>
                     </div>
                     <div class="content-block3">
-                        <h3><a href="video-single-page.html">Video 3</a></h3>
+                        <a class="block" href="video-single-page.html">Video 3</a>
                     </div>
                 </div>
                 <!--signup-->
-                <div class="content__signup">
-                    <p>Sign in or become a member to view the latest available videos.</p>
+                <div class="content__signup--top">
+                    <p>Sign in or become a member to access free and premium video content.</p>
                     <button class="content__button">Already a member? Sign in.</button>
-                    <button class="content__button">See membership plans</button>
+                    <button class="content__button">Sign up FREE</button>
+                    <button class="content__button">Premium content plans</button>
                 </div>
             </div>
             <!--sidebar-right-->
@@ -193,7 +205,7 @@
             </section>
             <section class="footer__section">
                 <h3 class="footer">About us</h3>
-                <p class="footer">Future of Web Design is produced by <a href="about.html">Future Insights</a>. We pride ourselves in creating awesome events for designers, developers and anyone working to make the web a better place. <a href="about.html">Find out more</a> about who we are and what we do.</p>
+                <p class="footer">Future of Web Design is produced by <a href="../about.html">Future Insights</a>. We pride ourselves in creating awesome events for designers, developers and anyone working to make the web a better place. <a href="../about.html">Find out more</a> about who we are and what we do.</p>
                 <p class="footer">Get in touch: <a href="mailto:hello@futureinsights.com">hello@futureinsights.com</a></p>
             </section>
         </div>

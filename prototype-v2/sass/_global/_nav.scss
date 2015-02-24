@@ -1,0 +1,126 @@
+/* Top level nav */
+
+nav {
+    @include container;
+    @include cf;
+    background-color: $color2;
+    @include section(0, $small-padding);
+}
+    ul.top-nav, ul.login {
+        list-style: none;
+        font-family: $font-stack1;
+        li {
+            display: none;
+            @media (min-width: 700px) {
+                display: inline-block;
+                position: relative;
+                margin-right: $small-padding;
+                color: $color4;
+                padding-top: .8em;
+            }
+        }
+    }
+    ul.top-nav {
+        position: relative;
+        @media (min-width: 700px) {
+            display: block;
+            @include span(8 of 12);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+    ul.login {
+        @media (min-width: 700px) {
+            display: block;
+            @include span(4 of 12 last);
+            li {
+                float: right;
+            }
+            li:first-child {
+                margin-right: 0;
+            }
+            li.nav__social-button {
+                a {
+                    display: inline-block;
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin-top: -.8em;
+                    background-color: $color4;
+                    border-radius: 50%;
+                    padding: .3em;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+/* Top-level sub navigation */
+@media (min-width: 700px) {
+    ul.top-nav {
+        li {
+            ul {
+                position: absolute;
+                display: none; 
+                padding-top: 1em;
+                li {
+                    display: block;
+                    width: 10em;
+                    padding: $small-padding;
+                    background-color: $color2;
+                    a:hover {
+                        color: $color1;
+                    }
+                }
+            }
+            &:hover ul {
+                display: block;
+                z-index: 100;
+            }
+        }
+    }
+ 
+}
+
+/* Mobile navigation */
+ul.top-nav--mobile {
+    font-family: $font-stack1;
+    color: $color1;
+    @media (min-width: 700px) {
+        display: none;
+    }
+    li {
+        display: none;
+        ul.top-nav__sub {
+            li.top-nav__sub--item {
+                display: none;
+            }
+        }
+        &:hover ul.top-nav__sub li.top-nav__sub--item {
+            display: block;
+            background-color: $color1;
+        }
+    }
+    &:hover li {
+        display: block;
+        padding: .8em;
+    }
+}
+
+/* Sub nav for content pages */
+ul.content__sub-nav {
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-right: $small-padding;
+        color: $color2;
+        a {
+            color: $color3;
+        }
+    }
+    li.current {
+        color: $color2;
+    }
+}

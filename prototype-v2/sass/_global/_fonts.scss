@@ -1,0 +1,49 @@
+h1 {
+    font-family: $font-stack1;
+    font-size: 3em;
+    margin-bottom: .2em;
+}
+
+h2 {
+    font-family: $font-stack1;
+    font-size: 2em;
+    margin-bottom: .5em;
+    a, a:focus, a:visited, a:hover, a:active {
+        color: $color3;
+    }
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: .2em;
+    font-family: $font-stack1;
+}
+h3.sidebar-r__title, h3.footer {
+    margin-top: $small-padding;
+    margin-bottom: $small-padding;
+    color: $color1;
+}
+
+p {
+    font-family: $font-stack1;
+    font-size: 1em;
+    line-height: 1.4;
+}
+p.subtitle {
+    @extend p;
+    margin-bottom: $large-padding;
+}
+p.section__body-text {
+    margin-top: $small-padding;
+    text-align: left;
+    a {
+        color: $color1;
+    }
+}
+p.footer {
+    color: $color1;
+    margin-bottom: $small-padding;
+    @media (min-width: 700px) {
+        @include span(6 of 12);
+    }
+}

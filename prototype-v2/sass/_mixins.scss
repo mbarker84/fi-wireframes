@@ -1,0 +1,13 @@
+@mixin section($margin-bottom, $padding: $padding) {
+    margin-bottom: $margin-bottom;
+    padding: $padding;
+}
+
+/* Clearfix */
+@mixin cf {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}

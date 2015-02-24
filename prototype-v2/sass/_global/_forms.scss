@@ -1,0 +1,163 @@
+/* Newsletter signup - homepage */
+
+h2.signup__title {
+    color: $color3;
+}
+
+form {
+    @include container(12);
+    @include cf;
+    fieldset {
+        color: $color4;
+        @include cf;
+        label {
+            text-align: left;
+            width: 100%;
+            float: left;
+            @media (min-width: 700px) {
+                @include span(6 of 12);
+            }
+            &:last-child {
+                @media (min-width: 700px) {
+                    @include span(6 of 12 last);
+                }
+            }
+            input {
+                margin: .5em 0 $small-padding 0;
+                width: 100%;
+                font-size: 1.2em;
+                padding: .3em;
+            }
+        }
+        input.radio {
+            margin-left: 2em;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    p {
+        color: $color3;
+    }
+    fieldset.event-selection {
+        margin-top: .8em;
+        margin-bottom: .8em;
+    }
+    button {
+        padding: .6em $small-padding .4em $small-padding;
+        border-radius: .2em;
+        border: none;
+        font-size: 1.2em;
+        margin-top: 0;
+        cursor: pointer;
+    }
+}
+
+/* Newsletter signup - right sidebar */
+
+
+.modal-dialog {
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	opacity: 0;
+	pointer-events: none;
+    &:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.modal__content {
+    padding: $small-padding;
+    background-color: $color2;
+    max-width: 400px;
+    margin: 20% auto 0 auto;
+    a.close {
+        margin-bottom: $small-padding;
+        display: block;
+        text-align: right;
+    }
+}
+
+.newsletter-form--modal {
+    label {
+        width: 100%;
+        margin-top: $small-padding;
+        padding-right: 0;
+        float: none;
+        &:last-child {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+/* Membership */
+
+.content__signup {
+    @include section(0, $small-padding);
+    background-color: $color2;
+    color: $color4;
+    min-height: 5em;
+}
+
+.content__signup--top {
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    color: $color4;
+    min-height: 5em;
+}
+
+button.content__button {
+    margin-bottom: $small-padding;
+    @media (min-width: 700px) {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+}
+.sidebar__button {
+    padding: 0;
+    a { 
+        padding: .6em $small-padding .4em $small-padding;
+    }
+}
+
+/* Speaker submission */
+
+.form-submission {
+    @include section(0, $small-padding);
+    @include cf;
+    background-color: $color2;
+    margin-top: $small-padding;
+    @media (min-width: 700px) {
+        label {
+            @include span(6 of 12);
+        }
+        label.second {
+            @include span(6 of 12 last);
+        }
+    }
+    label.form__description {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%;
+        textarea {
+            display: block;
+            width: 100%;
+            height: 10em;
+            margin-top: $small-padding;
+            margin-bottom: $small-padding;
+        }
+    }
+    fieldset.event-selection {
+        margin-bottom: $small-padding;
+    }
+}

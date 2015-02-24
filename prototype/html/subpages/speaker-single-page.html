@@ -15,19 +15,25 @@
         <!--mobile nav-->
         <ul class="top-nav--mobile">Menu
             <li><a href="../about.html">Home</a></li>
-            <li><a href="../about.html#events">Events</a></li>
+            <li><a href="#">Events</a>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="../index.html">FOWD</a></li>
+                    <li class="top-nav__sub--item"><a href="../index.html">FOWA</a></li>
+                    <li class="top-nav__sub--item"><a href="../index.html#events">All...</a></li>
+                </ul>
+            </li>
             <li><a href="#">Explore</a>
-            <ul>
-                <li class="current"><a href="blog-FOWD-main.html">Blog</a></li>
-                <li><a href="../videos-main.html">Videos</a></li>
-                <li><a href="../speakers-main.html">Speaker library</a></li>
-            </ul>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="../blog-FOWD-main.html">Blog</a></li>
+                    <li class="top-nav__sub--item"><a href="../videos-main.html">Videos</a></li>
+                    <li class="top-nav__sub--item"><a href="../speakers-main.html">Speaker library</a></li>
+                </ul>
             </li>
             <li><a href="">Get involved</a>
-                <ul>
-                    <li><a href="">Write</a></li>
-                    <li><a href="">Speak</a></li>
-                    <li><a href="">Sponsor</a></li>
+                <ul class="top-nav__sub">
+                    <li class="top-nav__sub--item"><a href="">Write</a></li>
+                    <li class="top-nav__sub--item"><a href="">Speak</a></li>
+                    <li class="top-nav__sub--item"><a href="">Sponsor</a></li>
                 </ul>
             </li>
             <li><a href="">Contact us</a></li>
@@ -35,7 +41,13 @@
         <!--desktop nav-->
         <ul class="top-nav">
             <li><a href="../about.html">Home</a></li>
-            <li><a href="../about.html#events">Events</a></li>
+            <li><a href="#">Events</a>
+                <ul>
+                    <li><a href="../index.html">FOWD</a></li>
+                    <li><a href="../index.html">FOWA</a></li>
+                    <li><a href="../index.html#events">All...</a></li>
+                </ul>
+            </li>
             <li><a href="#">Explore</a>
             <ul>
                 <li><a href="../blog-FOWD-main.html">Blog</a></li>
@@ -95,7 +107,7 @@
                     <div class="content__text-block--right">
                     </div>
                     <div class="content__text-block--right-secondary">
-                        <h3><a href="blog-single-page.html">Most recent content...(video, blog post, etc.)</a></h3>
+                        <h3><a href="blog-single-page.html">Most recent article...</a></h3>
                     </div>
                     <div class="content__text-block--right-secondary">
                         <h3>Upcoming speaking appearances</h3>
@@ -127,9 +139,10 @@
                 </div>
                 <!--signup-->
                 <div class="content__signup">
-                    <p>Sign in or become a member to view the latest available videos.</p>
+                    <p>Sign in or become a member to access free and premium video content.</p>
                     <button class="content__button">Already a member? Sign in.</button>
-                    <button class="content__button">See membership plans</button>
+                    <button class="content__button">Sign up FREE</button>
+                    <button class="content__button">Premium content plans</button>
                 </div>
             </div>
             <!--sidebar-right-->
