@@ -1,0 +1,119 @@
+/* Left Sidebar */
+    .sidebar-l {
+        @include section(0, $small-padding);
+        @include cf;
+        background-color: $color1;
+        @media (min-width: 900px) {
+            @include span(3 of 12);
+        }
+        ul.blog-sidebar__filter {
+            li {
+                @include section(0, $small-padding);
+                @include span(2 of 6);
+                background-color: $color2;
+                font-family: $font-stack1;
+                color: $color4;
+            }
+            li:nth-child(3) {
+                @include span(2 of 6 last);
+            }
+            li:first-child, li:nth-child(2), li:nth-child(3) {
+                height: 4em;
+                margin-bottom: $small-padding;
+                @media (min-width: 700px) {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            li:nth-child(4), li:nth-child(5) {
+                width: 100%;
+                margin-bottom: $small-padding;
+                @include cf;
+            }
+            li.current {
+                background-color: $color3;
+            }
+            li.search {
+                @include cf;
+                background-color: $color4;
+                color: $color2;
+                width: 100%;
+            }
+            .blog-sidebar__speaker {
+                display: none;
+                @media (min-width: 700px) {
+                    display: block;
+                    @include span(2 of 6);
+                    margin-top: $small-padding;
+                    margin-bottom: $small-padding;
+                    padding-bottom: -.2em;
+                }
+            }
+            .blog-sidebar__speaker:last-child {
+                @include span(2 of 6 last);
+            }
+            .blog-sidebar__button {
+                padding: .6em;
+                border-radius: .2em;
+                border: none;
+                font-size: 1.1em;
+                display: none;
+                @media (min-width: 700px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+ul.filter__video-category {
+    padding-bottom: $small-padding;
+    a.sidebar__menu-title {
+        padding: .8em;
+        background-color: $color2;
+        border-radius: .2em;
+        &:hover {
+            cursor: default;
+        }
+    }
+    li {
+        display: none;
+        background-color: $color2;
+    }
+    li.search {
+        background-color: $color4;
+        margin: .5em 0 0 0;
+    }
+    li.current {
+        background-color: $color3;
+    }
+    @media (max-width: 699px) {
+        &:hover {
+            li {
+                display: block;
+                z-index: 100;
+                padding: .8em;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    ul.filter__video-category {
+        padding-bottom: 0;
+        li {
+            display: block;
+            padding: $small-padding;
+            background-color: $color2;
+            margin-bottom: $small-padding;
+            a {
+                display: block;
+            }
+        }
+        a.sidebar__menu-title {
+            display: none;
+        }
+    }
+}

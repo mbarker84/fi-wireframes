@@ -65,3 +65,56 @@
             }
         }
     }
+
+ul.filter__video-category {
+    padding-bottom: $small-padding;
+    a.sidebar__menu-title {
+        padding: .8em;
+        background-color: $color2;
+        border-radius: .2em;
+        &:hover {
+            cursor: default;
+        }
+    }
+    li {
+        display: none;
+        background-color: $color2;
+    }
+    li.search {
+        background-color: $color4;
+        margin: .5em 0 0 0;
+    }
+    li.current {
+        background-color: $color3;
+    }
+    @media (max-width: 699px) {
+        &:hover {
+            li {
+                display: block;
+                z-index: 100;
+                padding: .8em;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    ul.filter__video-category {
+        padding-bottom: 0;
+        li {
+            display: block;
+            padding: $small-padding;
+            background-color: $color2;
+            margin-bottom: $small-padding;
+            a {
+                display: block;
+            }
+        }
+        a.sidebar__menu-title {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "susy";
+
+/* Variables and mixins */
+@import '_variables.scss';
+@import '_mixins.scss';
+/* Partials */
+@import '_global/*.scss';
+
+$susy: (
+    columns: 12,
+    global-box-sizing: border-box,
+);
+
+@include border-box-sizing;
+
+
+* {
+    font-family: $font-stack1;
+}
+
+
+a, a:visited, a:hover, a:active {
+    color: $color4;
+}
+
+a.block {
+    height: 100%;
+    display: block;
+    &:hover {
+        color: $color2;
+    }
+}
+a.current, a.content__title {
+    color: $color1;
+    text-decoration: none;
+}
+
+
+/* Main */
+
+main {
+    @include section(0, $small-padding);
+    background-color: $color3;
+    section {
+        @include section($small-padding, $small-padding);
+        @include cf;
+        background-color: $color4;
+        h2 {
+        text-align: center;
+        }
+    }
+    section.events, section.team {
+        padding-bottom: 0;
+    }
+    section.newsletter-signup {
+        background-color: $color2;
+    }
+    section.last {
+        margin-bottom: 0;
+    }
+}
+
+.row {
+    @include container;
+    @include cf;
+    .content-block1, .content-block2, .content-block3 {
+        height: 15em;
+        background-color: $color1;
+        @include section($small-padding, $small-padding);
+    }
+    @media (min-width: 700px) {
+        .content-block1, .content-block2 {
+            @include span(4 of 12);
+            margin-bottom: 0;
+        }
+        .content-block3 {
+            @include span(4 of 12 last);
+            margin-bottom: 0;
+        }
+    }
+}
+
+button.content__button {
+        background-color: $color1;
+        border: none;
+        border-radius: .2em;
+        padding: $small-padding;
+        color: $color4;
+        font-size: 1.2em;
+}
+button.sidebar__button {
+    margin-bottom: $small-padding;
+    width: 100%;
+}
+
+/* General content */
+
+.wrapper {
+        @include container(1100px);
+}
+
+.wrapper--wide {
+    @include container;
+    @include cf;
+    background-color: $color3;
+}
+
+/* Footer */
+
+footer {
+    @include cf;
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    margin-bottom: 0;
+}

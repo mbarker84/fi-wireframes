@@ -94,7 +94,6 @@ button.content__button {
         border-radius: .2em;
         padding: $small-padding;
         color: $color4;
-        font-size: 1.2em;
 }
 button.sidebar__button {
     margin-bottom: $small-padding;
@@ -104,7 +103,7 @@ button.sidebar__button {
 /* General content */
 
 .wrapper {
-        @include container(1300px);
+    @include container(1200px);
 }
 
 .wrapper--wide {

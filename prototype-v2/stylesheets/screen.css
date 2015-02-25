@@ -247,8 +247,8 @@ form fieldset label {
 form fieldset label input {
   margin: 0.5em 0 1em 0;
   width: 100%;
-  font-size: 1.2em;
   padding: .3em;
+  font-size: 1em;
 }
 /* line 32, ../sass/_global/_forms.scss */
 form fieldset input.radio {
@@ -272,9 +272,9 @@ form button {
   padding: 0.6em 1em 0.4em 1em;
   border-radius: .2em;
   border: none;
-  font-size: 1.2em;
   margin-top: 0;
   cursor: pointer;
+  font-size: 1em;
 }
 
 /* Newsletter signup - right sidebar */
@@ -344,27 +344,30 @@ form button {
 
 /* line 118, ../sass/_global/_forms.scss */
 button.content__button {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 @media (min-width: 700px) {
   /* line 118, ../sass/_global/_forms.scss */
   button.content__button {
-    margin-bottom: 0;
     display: inline-block;
   }
 }
+/* line 123, ../sass/_global/_forms.scss */
+button.content__button a {
+  font-size: .9em;
+}
 
-/* line 125, ../sass/_global/_forms.scss */
+/* line 127, ../sass/_global/_forms.scss */
 .sidebar__button {
   padding: 0;
 }
-/* line 127, ../sass/_global/_forms.scss */
+/* line 129, ../sass/_global/_forms.scss */
 .sidebar__button a {
   padding: 0.6em 1em 0.4em 1em;
 }
 
 /* Speaker submission */
-/* line 134, ../sass/_global/_forms.scss */
+/* line 136, ../sass/_global/_forms.scss */
 .form-submission {
   margin-bottom: 0;
   padding: 1em;
@@ -378,27 +381,27 @@ button.content__button {
   clear: both;
 }
 @media (min-width: 700px) {
-  /* line 140, ../sass/_global/_forms.scss */
+  /* line 142, ../sass/_global/_forms.scss */
   .form-submission label {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 143, ../sass/_global/_forms.scss */
+  /* line 145, ../sass/_global/_forms.scss */
   .form-submission label.second {
     width: 49.15254%;
     float: right;
     margin-right: 0;
   }
 }
-/* line 147, ../sass/_global/_forms.scss */
+/* line 149, ../sass/_global/_forms.scss */
 .form-submission label.form__description {
   clear: both;
   float: none;
   display: block;
   width: 100%;
 }
-/* line 152, ../sass/_global/_forms.scss */
+/* line 154, ../sass/_global/_forms.scss */
 .form-submission label.form__description textarea {
   display: block;
   width: 100%;
@@ -406,7 +409,7 @@ button.content__button {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 160, ../sass/_global/_forms.scss */
+/* line 162, ../sass/_global/_forms.scss */
 .form-submission fieldset.event-selection {
   margin-bottom: 1em;
 }
@@ -911,6 +914,68 @@ ul.content__sub-nav li.current {
   }
 }
 
+/* line 69, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category {
+  padding-bottom: 1em;
+}
+/* line 71, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category a.sidebar__menu-title {
+  padding: .8em;
+  background-color: #333333;
+  border-radius: .2em;
+}
+/* line 75, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category a.sidebar__menu-title:hover {
+  cursor: default;
+}
+/* line 79, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category li {
+  display: none;
+  background-color: #333333;
+}
+/* line 83, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category li.search {
+  background-color: #FFFFFF;
+  margin: .5em 0 0 0;
+}
+/* line 87, ../sass/_global/_sidebar-left.scss */
+ul.filter__video-category li.current {
+  background-color: #cccccc;
+}
+@media (max-width: 699px) {
+  /* line 92, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category:hover li {
+    display: block;
+    z-index: 100;
+    padding: .8em;
+  }
+  /* line 96, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category:hover li a {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+  /* line 105, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category {
+    padding-bottom: 0;
+  }
+  /* line 107, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category li {
+    display: block;
+    padding: 1em;
+    background-color: #333333;
+    margin-bottom: 1em;
+  }
+  /* line 112, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category li a {
+    display: block;
+  }
+  /* line 116, ../sass/_global/_sidebar-left.scss */
+  ul.filter__video-category a.sidebar__menu-title {
+    display: none;
+  }
+}
 /* Right sidebar */
 /* line 2, ../sass/_global/_sidebar-right.scss */
 .sidebar-r {
@@ -1100,7 +1165,7 @@ button.sidebar__button {
 /* General content */
 /* line 104, ../sass/screen.scss */
 .wrapper {
-  max-width: 1300px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
