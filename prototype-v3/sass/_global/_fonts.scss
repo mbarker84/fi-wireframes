@@ -24,10 +24,18 @@ h3.sidebar-r__title, h3.footer {
     color: $color1;
 }
 
+h4 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
 p {
     font-family: $font-stack1;
     font-size: 1em;
     line-height: 1.4;
+    a {
+        color: $color1;
+    }
 }
 p.subtitle {
     @extend p;

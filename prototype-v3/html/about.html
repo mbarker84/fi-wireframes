@@ -101,27 +101,25 @@
             <section id="events" class="events">
                 <h2>Our Events</h2>
                 <ul class="content__gallery">
-                    <li><a class="block" href="index.html">FOWD</a></li>
-                    <li><a class="block" href="index.html">FOWA</a></li>
-                    <li><a class="block" href="http://futureinsightslive.com">FI Live</a></li>
-                    <li><a class="block" href="http://ultimatedeveloperevent.com">UDE</a></li>
-                    <li><a class="block" href="http://refreshboston.com/">Refresh Boston</a></li>
-                    <li><a class="block" href="http://londonweb.org">London Web</a></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/London-FOWD-2.jpg" width="100%" height="auto"></figure></a><figcaption><a href="index.html"><h3>FOWD</h3></a></figcaption></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/London-FOWA-1.jpg" width="100%" height="auto"></figure></a><figcaption><a href="index.html"><h3>FOWA</h3></a></figcaption></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/Boston-UDE-1.jpg" width="100%" height="auto"></figure></a><figcaption><a href="index.html"><h3>UDE</h3></a></figcaption></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/LasVegas-FILive-1.jpg" width="100%" height="auto"></a><figcaption><a href="index.html"><h3>FI Live</h3></a></figcaption></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/Boston-RB-1.jpg" width="100%" height="auto"></a><figcaption><a href="index.html"><h3>Refresh Boston</h3></a></figcaption></li>
+                    <li><a class="block" href="index.html"><figure><img src="../img/location-photos/London-LondonWeb-1.jpg" width="100%" height="auto"></a><figcaption><a href="index.html"><h3>London Web</h3></a></figcaption></li>
                 </ul>
             </section>
             <!--get involved section-->
             <section class="get-involved">
                 <h2>Get Involved</h2>
                 <div class="row">
-                    <div class="content-block1">
-                        <a class="block" href="get-involved.html#write"><h3>Write for us</h3></a>
-                    </div>
-                    <div class="content-block2">
-                        <a class="block" href="get-involved.html#speak"><h3>Speak at an event</h3></a>
-                    </div>
-                    <div class="content-block3">
-                        <a class="block" href="get-involved.html#sponsor"><h3>Sponsor our events</h3></a>
-                    </div>
+                    <div class="row">
+                    <ul class="content__gallery">
+                        <li><a class="block" href="get-involved.html#write"><figure class="blank"></figure></a><figcaption><a href="get-involved.html#write"><h3>Write for us</h3></a></figcaption></figure></li>
+                        <li><a class="block" href="get-involved.html#speak"><figure class="blank"></figure></a><figcaption><a href="get-involved.html#speak"><h3>Speak at an event</h3></a></figcaption></figure></li>
+                        <li><a class="block" href="get-involved.html#sponsor"><figure class="blank"></figure></a><figcaption><a href="get-involved.html#sponsor"><h3>Sponsor</h3></a></figcaption></figure></li>
+                    </ul>
+                </div>
                 </div>
                 <p class="section__body-text">Got a question? Email <a href="mailto:hello@futureinsights.com">hello@futureinsights.com</a> and we&rsquo;ll be happy to help.</p>
             </section>
@@ -140,9 +138,16 @@
                         <input class="radio" type="radio" name="newsletter" value="All"> All
                     </fieldset>
                     <button name="submit">
-                          Submit
+                          <a href="#open-modal-thankyou">Submit</a>
                     </button>
                 </form>
+                <!--modal-->
+                <div id="open-modal-thankyou" class="modal-dialog">
+                    <div class="modal__content">
+                        <a href="#close" title="Close" class="close">X</a>
+                        <p class="modal">Thank you for signing up for our free newletter, bringing you all the latest content. Please check your inbox and click the link to confirm.</p>
+                    </div>
+                </div>
             </section>
             <!--ABOUT section-->
             <section id="about" class="about last">

@@ -33,7 +33,7 @@ a.block {
     height: 100%;
     display: block;
     &:hover {
-        color: $color2;
+        color: $color3;
     }
 }
 a.current, a.content__title {
@@ -42,11 +42,10 @@ a.current, a.content__title {
 }
 
 
-/* Main */
+/* Main homepage */
 
 main {
     @include section(0, $small-padding);
-    background-color: $color3;
     section {
         @include section($small-padding, $small-padding);
         @include cf;
@@ -59,6 +58,7 @@ main {
         padding-bottom: 0;
     }
     section.newsletter-signup {
+        margin: 0 $small-padding $small-padding $small-padding;
         background-color: $color2;
     }
     section.last {
@@ -69,6 +69,9 @@ main {
 .row {
     @include container;
     @include cf;
+    a, a:visited, a:hover, a:active {
+        color: $color1;
+    }
     .content-block1, .content-block2, .content-block3 {
         height: 15em;
         background-color: $color1;
@@ -101,14 +104,34 @@ button.sidebar__button {
 
 /* General content */
 
+.last {
+    margin-bottom: 0;
+}
+
+.padding {
+    padding-bottom: $small-padding;
+}
+
+.no-padding {
+    @media (min-width: 700px) {
+        padding: 0;
+    }
+}
+
 .wrapper {
-        @include container(1100px);
+    @include container(1100px);
 }
 
 .wrapper--wide {
     @include container;
     @include cf;
-    background-color: $color3;
+}
+
+/* Sidebar link styles */
+.sidebar-l, .sidebar-r {
+    a, a:visited, a:hover, a:active {
+    color: $color4;
+    }
 }
 
 /* Footer */

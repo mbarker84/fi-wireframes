@@ -36,8 +36,12 @@ h2.header--secondary {
 
 header.blog-header {
     height: auto;
+    background-color: transparent;
     .blog-header__header-group {
         text-align: left;
         margin: 0;
+        a {
+            color: $color2;
+        }
     }
 }

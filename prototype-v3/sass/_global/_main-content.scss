@@ -1,4 +1,4 @@
-/* Center content - blog */
+/* Center content */
     .content {
         @include section(0, $small-padding);
         height: auto;
@@ -13,12 +13,10 @@
             @include cf;
             border-bottom: 2px solid $color3;
             margin-bottom: $small-padding;
-            padding-bottom: $small-padding;
         }
         .row:last-child, .row--last {
             margin-bottom: 0;
             border-bottom: none;
-            padding-bottom: 0;
         }
         .blog-content__img {
             background-color: $color1;
@@ -31,10 +29,6 @@
         }
         .blog-content__text-block {
             padding-top: $small-padding;
-            a {
-                color: $color1;
-                text-decoration: none;
-            }
             @media (min-width: 700px) {
                 @include span(8 of 12 last);
                 padding: 0;
@@ -68,6 +62,7 @@
 /* Content - general */
 
 .content__col--left {
+    position: relative;
     @media (min-width: 700px) {
         @include span(4 of 12);
     }
@@ -79,35 +74,30 @@
     }
     .content__contact-info {
         @include section($small-padding, $small-padding);
-        height: 10em;
         background-color: $color3;
+        margin-top: $small-padding;
+        p {
+            margin-bottom: 0;
+        }
+        a {
+            color: $color4;
+        }
     }
 }
 
 .content__text-block--right {
     padding-top: $small-padding;
-            @media (min-width: 700px) {
-                @include span(8 of 12 last);
-                padding: 0;
-            }
-            @media (min-width: 1500px) {
-                @include span(8 of 12 last);
-                padding: $small-padding;
-            }
-}
-.short {
-    height: 10em;
-    margin-bottom: 0;
-}
-
-.content__text-block--right-secondary {
+    h3 {
+        margin-bottom: .5em;
+    }
     @media (min-width: 700px) {
         @include span(8 of 12 last);
+        padding: 0;
     }
-    height: 10em;
-    background-color: $color3;
-    margin-top: $small-padding;
-    @include section(0, $small-padding);
+    @media (min-width: 1500px) {
+        @include span(8 of 12 last);
+        padding: $small-padding;
+    }
 }
 
 .content__col--full-1, .content__col--full-2 {
@@ -117,8 +107,4 @@
     }
 }
 
-.content__col--full-2-long {
-    @include section(0, $small-padding);
-    height: 60em;
-    background-color: $color3;
-}
+
