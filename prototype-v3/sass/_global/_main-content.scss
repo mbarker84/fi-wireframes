@@ -5,6 +5,7 @@
         background-color: $color4;
         @media (min-width: 900px) {
             @include span(6 of 12);
+            padding-top: 0;
         }
         p {
             margin-bottom: $small-padding;
