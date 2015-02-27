@@ -14,6 +14,7 @@
             @include cf;
             border-bottom: 2px solid $color3;
             margin-bottom: $small-padding;
+            float: none;
         }
         .row:last-child, .row--last {
             margin-bottom: 0;
@@ -105,6 +106,15 @@
     margin-bottom: $small-padding;
     img {
         margin-bottom: -.2em;
+    }
+    h3 {
+        clear: both;
+    }
+}
+
+.narrow {
+    @media (min-width: 1300px) {
+        padding-right: span(2 of 6);
     }
 }
 
