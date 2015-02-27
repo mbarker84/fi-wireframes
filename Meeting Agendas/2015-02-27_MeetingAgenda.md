@@ -11,3 +11,5 @@ This latest version of the interactive prototype is populated with dummy content
 I’ll be writing up a useability testing plan, which I’ll share with you before we start conducting tests.
 
 I’ve created a Google spreadsheet for us to fill out any issues, both from our own testing and as a result of useability testing.
+
+I’ll create a spreadsheet template for us to use in evaluating testing participants’ feedback.
