@@ -143,7 +143,7 @@ button.content__button {
 /* Speaker submission */
 
 .form-submission {
-    @include section(0, $small-padding);
+    @include section(0, 2em);
     @include cf;
     background-color: $color2;
     margin-top: $small-padding;
@@ -172,3 +172,32 @@ button.content__button {
         margin-bottom: $small-padding;
     }
 }
+
+/* Comment form */
+
+form.comment-form {
+    @include section($small-padding, $small-padding);
+    background-color: $color2;
+    @media (min-width: 700px) {
+        label {
+            @include span(6 of 12);
+        }
+        label.second {
+            @include span(6 of 12 last);
+        }
+    }
+    label.form__description {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%;
+        textarea {
+            display: block;
+            width: 100%;
+            height: 10em;
+            margin-top: $small-padding;
+            margin-bottom: $small-padding;
+        }
+    }
+}
+    

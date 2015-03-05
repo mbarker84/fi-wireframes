@@ -12,8 +12,14 @@ header {
     .header-group {
         position: relative;
         top: 20%;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
         @media (min-width: 700px) {
             top: 40%;
+        }
+        a {
+            color: $color4;
         }
     }
     .header__button {

@@ -33,14 +33,13 @@ h4 {
 p {
     font-family: $font-stack1;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.6;
     a {
         color: $color1;
     }
 }
 p.subtitle {
     @extend p;
-    margin-bottom: $large-padding;
 }
 p.section__body-text {
     margin-top: $small-padding;

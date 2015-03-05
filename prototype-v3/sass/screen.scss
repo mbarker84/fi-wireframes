@@ -58,6 +58,7 @@ main {
         padding-bottom: 0;
     }
     section.newsletter-signup {
+        @include section(0, 2em);
         margin: 0 $small-padding $small-padding $small-padding;
         background-color: $color2;
     }

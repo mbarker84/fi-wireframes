@@ -24,6 +24,14 @@ ul.content__gallery {
                 @include span(4 of 12 last);
             }
         }
+        &.no-picture {
+            @include section(0, $small-padding);
+            height: 15em;
+            background-color: $color1;
+            a:focus, a:hover {
+                color: $color2;
+            }
+        }
     }
     li.locked {
         background-color: $color3;
