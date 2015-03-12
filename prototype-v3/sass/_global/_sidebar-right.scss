@@ -1,12 +1,12 @@
     /* Right sidebar */
     .sidebar-r {
-        @include section(0, $small-padding);
         @include cf;
         @media (min-width: 900px) {
             @include span(3 of 12 last);
         }
         ul.blog-sidebar__events {
             @include cf;
+            overflow: hidden;
             li {
                 @include span(3 of 6);
                 @include section($small-padding, $small-padding);

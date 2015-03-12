@@ -1,5 +1,11 @@
 /* Top level nav */
 
+nav#menu {
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+}
+
 nav {
     @include container;
     @include cf;

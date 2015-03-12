@@ -24,6 +24,10 @@ $susy: (
     font-family: $font-stack1;
 }
 
+body {
+    position: relative;
+}
+
 
 a, a:visited, a:hover, a:active {
     color: $color4;
@@ -90,19 +94,6 @@ main {
     }
 }
 
-button.content__button {
-        background-color: $color1;
-        border: none;
-        border-radius: .2em;
-        padding: $small-padding;
-        color: $color4;
-        font-size: 1.2em;
-}
-button.sidebar__button {
-    margin-bottom: $small-padding;
-    width: 100%;
-}
-
 /* General content */
 
 .last {
@@ -142,4 +133,17 @@ footer {
     @include section($small-padding, $small-padding);
     background-color: $color2;
     margin-bottom: 0;
+}
+
+
+.footer__popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: $small-padding;
+    background-color: $color2;
+    width: 20em;
+    height: auto;
+    z-index: 3000;
+    display: block;
 }

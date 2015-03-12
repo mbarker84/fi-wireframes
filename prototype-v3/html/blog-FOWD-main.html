@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Future of Web Design | Blog</title>
     <link href="../stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <!--load jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js/jquery.fadethis.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 </head>
     
 <body>
     <!--nav-->
-    <nav>
+    <nav id="menu">
         <!--mobile nav-->
         <ul class="top-nav--mobile">Menu
             <li><a href="about.html">Home</a></li>
@@ -86,6 +90,23 @@
             </div>
         </ul>
     </nav>
+    <!--signup button-->
+    <button class="content__button" id="signup-popout"><a href="#open-modal-signup">Login or sign up to access free video content</a></button>
+    <!--modal-->
+    <div id="open-modal-signup" class="modal-dialog">
+        <div class="modal__content">
+            <a href="#close" title="Close" class="close">X</a>
+            <form action="demo_form.asp" method="get" class="newsletter-form--modal">
+                <fieldset class="signup-details">
+                    <label for="name">Name: <input type="text" name="name" class="signup__form-field"></label>
+                    <label for="email">Email: <input type="email" name="email"></label>
+                </fieldset>
+                <button name="submit">
+                        Submit
+                </button>
+            </form>
+        </div>
+    </div>
     <!--header-->
     <header class="blog-header">
         <div class="blog-header__header-group">
@@ -180,31 +201,15 @@
             </div>
             <!--sidebar-right-->
             <div class="sidebar-r">
-                <button class="content__button sidebar__button"><a href="#open-modal-signup">Sign up to the newsletter</a></button>
-                <!--modal-->
-                <div id="open-modal-signup" class="modal-dialog">
-                    <div class="modal__content">
-                        <a href="#close" title="Close" class="close">X</a>
-                        <form action="demo_form.asp" method="get" class="newsletter-form--modal">
-                            <fieldset class="signup-details">
-                                <label for="name">Name: <input type="text" name="name" class="signup__form-field"></label>
-                                <label for="email">Email: <input type="email" name="email"></label>
-                            </fieldset>
-                            <button name="submit">
-                                  Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
                 <!--list events-->
-                <h2>Events</h2>
+                <h2>Upcoming Events</h2>
                 <ul class="blog-sidebar__events">
-                    <li><a class="block" href="http://futureofwebdesign.com/london-2015">London</a></li>
-                    <li><a class="block" href="http://futureofwebdesign.com/nyc-2015">NYC</a></li>
-                    <li><a class="block" href="http://futureofwebdesign.com/sf-2015">SF</a></li>
-                    <li><a class="block" href="http://futureinsightslive.com">FI Live</a></li>
-                    <li><a class="block" href="http://londonweb.org">London Web</a></li>
-                    <li><a class="block" href="http://refreshboston.com/">Refresh Boston</a></li>
+                    <li class="slide-right"><a class="block" href="http://futureofwebdesign.com/london-2015">London</a></li>
+                    <li class="slide-right"><a class="block" href="http://futureofwebdesign.com/nyc-2015">NYC</a></li>
+                    <li class="slide-right"><a class="block" href="http://futureofwebdesign.com/sf-2015">SF</a></li>
+                    <li class="slide-right"><a class="block" href="http://futureinsightslive.com">FI Live</a></li>
+                    <li class="slide-right"><a class="block" href="http://londonweb.org">London Web</a></li>
+                    <li class="slide-right"><a class="block" href="http://refreshboston.com/">Refresh Boston</a></li>
                 </ul>
                 <h3 class="sidebar-r__title">More events from Future Insights...</h3>
                 <ul class="blog-sidebar__events">
@@ -233,6 +238,37 @@
             </section>
         </div>
     </footer>
+    
+    <!--javascript-->
+    <!--slide in http://www.jqueryscript.net/animation/jQuery-Plugin-For-Element-Fade-Slide-Effects-As-You-Scroll-FadeThis.html-->
+    <script>
+        $(document).ready(function() {
+        $(window).fadeThis({
+        baseName:       "slide-",
+        speed:          500, // <a href="http://www.jqueryscript.net/animation/">Animation</a> speed in milliseconds.
+        easing:         "swing", // Animation easing.
+        offset:         100, // <a href="http://www.jqueryscript.net/tags.php?/Scroll/">Scroll</a> offset, allowing to fire fading a little after or before the element appear.
+        reverse:        true, // Make element disappear again when scrolled out, and fade again when scrolled in. 
+        distance:       50, // Element distance to its emplacement, before animation.
+        scrolledIn:     null, // Function to call when the element come in viewport. 
+        scrolledOut:    null // Function to call when the element go out of the viewport. 
+        });
+        });
+    </script>
+    <!-- CTA fade in on scroll https://redvinestudio.com/how-to-make-a-menu-fade-in-on-scroll-using-jquery/-->
+    <script type="text/javascript">
+        (function($) {          
+            $(document).ready(function(){                    
+                $(window).scroll(function(){                          
+                    if ($(this).scrollTop() > 200) {
+                        $('#signup-popout').fadeIn(500);
+                    } else {
+                        $('#signup-popout').fadeOut(500);
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
     
 </html>

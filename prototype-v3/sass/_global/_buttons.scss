@@ -1,0 +1,24 @@
+button.content__button {
+        background-color: $color1;
+        border: none;
+        border-radius: .2em;
+        padding: $small-padding;
+        color: $color4;
+        font-size: 1.2em;
+}
+button.sidebar__button {
+    margin-bottom: $small-padding;
+    width: 100%;
+}
+
+#signup-popout {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 2500;
+    display: none;
+    border-radius: 0;
+}
