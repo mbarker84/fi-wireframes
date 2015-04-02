@@ -1,0 +1,80 @@
+/* Top level nav */
+
+nav {
+    font-family: $font-stack1;
+    color: $color1;
+    background-color: $color2;
+}
+
+
+/* Mobile nav */
+
+ul.top-nav--mobile {
+    position: relative;
+    overflow: hidden;
+    @media (min-width: $bp-m) {
+        display: none;
+    }
+    a {
+        display: block;
+        padding: .8em;
+    }
+    li {
+        position: absolute;
+        left: -100px;
+        opacity: 0;
+        transition-property: left, opacity;
+        transition-duration: .3s, .5s;
+        transition-timing-function: ease-in-out;
+    }
+    &:hover, &:focus {
+        li {
+            display: block;
+            position: relative;
+            left: 0;
+            opacity: 1;
+            margin-left: 1em;
+        }
+    }
+}
+
+li {
+    ul.top-nav__sub {
+        display: none;
+        li {
+            display: none;
+        }
+    }
+    &:focus, &:hover {
+        ul.top-nav__sub {
+            display: block;
+        }
+    }
+}
+
+li.top-nav__sub--item {
+    ul.top-nav__sub--2 {
+        display: none;
+    }
+    &:focus, &:hover {
+        ul.top-nav__sub--2 {
+            display: block;
+        }
+    }
+}
+
+.top-nav__right {
+    display: none;
+    @media (min-width: $bp-m) {
+        display: block;
+    }
+}
+
+/* Desktop */
+
+ul.top-nav--desktop {
+    display: none;
+    @media (min-width: $bp-m) {
+        display: block;
+    }
+}
