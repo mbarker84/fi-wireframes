@@ -13,12 +13,18 @@
 <body>
     <!--nav-->
     <nav>
-        <!--mobile nav-->
-        <ul class="top-nav--mobile"><a href="#">
-                Menu
-                <i class="fa fa-angle-down"></i>
+        <div class="top-nav__logo">
+            <a href="#">
+                    <img class="fi-logo" src="../img/logos/fi-logo-white.svg" width="100%" height="auto">
+                    <img class="fi-text" src="../img/logos/fi-text-white.svg" width="100%" height="auto">
             </a>
-            <li><a href="about.html#events">Events <i class="fa fa-angle-down"></i></a>
+        </div>
+        <!--mobile nav-->
+        <div class="menu__trigger" href="#open-menu">
+            <a class="menu__trigger--button" href="">Menu
+            <i class="fa fa-angle-right"></i></a>
+        <ul id="open-menu" class="top-nav--mobile">
+            <li class="top-nav__item"><a href="about.html#events">Events <i class="fa fa-angle-right"></i></a>
                 <ul class="top-nav__sub">
                     <li class="top-nav__sub--item"><a href="#">Future of Web Design</a></li>
                     <li class="top-nav__sub--item"><a href="#">Future of Web Apps</a></li>
@@ -28,17 +34,17 @@
                     <li class="top-nav__sub--item"><a href="#">Refresh Boston</a></li>
                 </ul>
             </li>
-            <li><a href="videos-main.html">Videos</a>
+            <li class="top-nav__item"><a href="videos-main.html">Videos</a>
             </li>
-            <li><a href="#">Blog</a>
+            <li class="top-nav__item"><a href="#">Blog</a>
             </li>
-            <li><a href="#">More <i class="fa fa-angle-down"></i></a>
+            <li class="top-nav__item"><a href="#">More <i class="fa fa-angle-right"></i></a>
                 <ul class="top-nav__sub">
                     <li class="top-nav__sub--item"><a href="about.html">About Us</a></li>
                     <li class="top-nav__sub--item">
                         <a href="#">
                             Get Involved
-                            <i class="fa fa-angle-down"></i>
+                            <i class="fa fa-angle-right"></i>
                         </a>
                         <ul class="top-nav__sub--2">
                             <li class="top-nav__sub2--item"><a href="#">Write for us</a></li>
@@ -50,14 +56,10 @@
                 </ul>
             </li>
         </ul>
+        </div>
         <!--desktop nav-->
         <ul class="top-nav--desktop">
-            <li><a href="#">
-                    <img src="../img/logos/fi-logo-white.svg" width="100%" height="auto">
-                    <img src="../img/logos/fi-text-white.svg" width="100%" height="auto">
-                </a>
-            </li>
-            <li><a href="about.html#events">Events</a>
+            <li class="top-nav__item"><a href="about.html#events">Events</a>
                 <ul class="top-nav__sub">
                     <li class="top-nav__sub--item"><a href="#">Future of Web Design</a></li>
                     <li class="top-nav__sub--item"><a href="#">Future of Web Apps</a></li>
@@ -67,11 +69,11 @@
                     <li class="top-nav__sub--item"><a href="#">Refresh Boston</a></li>
                 </ul>
             </li>
-            <li><a href="videos-main.html">Videos</a>
+            <li class="top-nav__item"><a href="videos-main.html">Videos</a>
             </li>
-            <li><a href="#">Blog</a>
+            <li class="top-nav__item"><a href="#">Blog</a>
             </li>
-            <li><a href="#">More</a>
+            <li class="top-nav__item"><a href="#">More</a>
                 <ul class="top-nav__sub">
                     <li class="top-nav__sub--item"><a href="about.html">About Us</a></li>
                     <li class="top-nav__sub--item"><a href="#">Get Involved</a>
@@ -84,9 +86,10 @@
                 </ul>
             </li>
         </ul>
-        <!--search-->
+            <!--search-->
         <div class="search">
             <div class="search__button">
+                <i class="fa fa-search"></i>
             </div>
             <div class="search__box">
             </div>
@@ -97,8 +100,8 @@
                 <a href="#">Login / Sign Up</a>
             </div>
             <div class="top-nav__social">
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-facebook"></i>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
             </div>
         </div>
     </nav>

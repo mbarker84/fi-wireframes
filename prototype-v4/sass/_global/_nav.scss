@@ -3,78 +3,276 @@
 nav {
     font-family: $font-stack1;
     color: $color1;
-    background-color: $color2;
+    position: relative;
+    width: 100%;
+}
+
+/* logo */
+
+.top-nav__logo {
+    display: none;
 }
 
 
 /* Mobile nav */
 
 ul.top-nav--mobile {
-    position: relative;
-    overflow: hidden;
-    @media (min-width: $bp-m) {
-        display: none;
-    }
-    a {
-        display: block;
-        padding: .8em;
-    }
-    li {
-        position: absolute;
-        left: -100px;
-        opacity: 0;
-        transition-property: left, opacity;
-        transition-duration: .3s, .5s;
-        transition-timing-function: ease-in-out;
-    }
-    &:hover, &:focus {
-        li {
+    position: absolute;
+    left: -100px;
+    opacity: 0;
+    background-color: $color2;
+    transition-property: left, opacity;
+    transition-duration: .3s, .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.menu__trigger {
+    display: block;
+    color: $color1;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    &:focus, &:hover {
+        overflow: visible;
+        ul.top-nav--mobile {
             display: block;
             position: relative;
             left: 0;
             opacity: 1;
-            margin-left: 1em;
+            width: 90%;
+        }
+    }
+    a {
+        padding: 1em;
+        display: inline-block;
+        background-color: $color2;
+        &.menu__trigger--button {
+            width: 30%;
         }
     }
 }
-
-li {
-    ul.top-nav__sub {
-        display: none;
-        li {
-            display: none;
-        }
-    }
-    &:focus, &:hover {
-        ul.top-nav__sub {
-            display: block;
-        }
-    }
-}
-
-li.top-nav__sub--item {
-    ul.top-nav__sub--2 {
-        display: none;
-    }
-    &:focus, &:hover {
-        ul.top-nav__sub--2 {
-            display: block;
-        }
-    }
-}
-
-.top-nav__right {
-    display: none;
-    @media (min-width: $bp-m) {
-        display: block;
-    }
-}
-
-/* Desktop */
 
 ul.top-nav--desktop {
     display: none;
-    @media (min-width: $bp-m) {
+}
+
+/* Transistion */
+
+ul.top-nav--mobile {
+    li {
+        ul.top-nav__sub {
+            position: absolute;
+            left: -100px;
+            opacity: 0;
+            background-color: $color2;
+            transition-property: left, opacity;
+            transition-duration: .3s, .5s;
+            transition-timing-function: ease-in-out;
+        }
+        &:focus, &:hover {
+            ul.top-nav__sub {
+                display: block;
+                position: relative;
+                left: 0;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+ul.top-nav--mobile {
+    li {
+        background-color: $color2;
+        padding-left: 1em;
+        a {
+            padding: 1em;
+            display: block;
+        }
+    }
+}
+
+
+.top-nav__right {
+    display: none;
+    @media (min-width: $bp-l) {
         display: block;
     }
 }
+
+li.top-nav__item {
+    max-width: 90%;
+}
+
+/* Search */
+
+.search {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    width: 70%;
+    background-color: $color4;
+    border-bottom: 1px solid $color1;
+    padding: 1em;
+}
+
+/* Tablet styles */
+
+@media (min-width: $bp-m) {
+    
+.top-nav__logo {
+    @media (min-width: $bp-m) {
+        display: inline-block;
+        width: 30%;
+        background-color: $color2;
+        height: 3.2em;
+        padding: .6em;
+        border-right: 1px solid $color1;
+        img.fi-logo {
+            display: block;
+            float:left;
+            width: 2em;
+            margin-right: 1em;
+        }
+        img.fi-text {
+            display: inline-block;
+            width: 8em;
+            padding-top: .7em;
+        }
+    }
+}
+    
+.menu__trigger {
+    a.menu__trigger--button {
+        position: fixed;
+        top: 0;
+        left: 30%;
+        width: 30%;
+        height: 3.2em;
+    }
+    &:focus, &:hover {
+        ul.top-nav--mobile {
+            width: 50%;
+        }
+    }
+}
+    
+.search {
+    position: fixed;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    background-color: $color4;
+    border-bottom: 1px solid $color1;
+    padding: 1em;
+}
+    
+}
+
+/* Desktop styles */
+
+@media (min-width: $bp-l) {
+
+nav {
+    background-color: $color2;
+    height: 3.2em;
+}
+    
+ul.top-nav--mobile {
+    display: none;
+}
+
+.menu__trigger {
+    display: none;
+}
+    
+.search {
+    display: inline-block;
+    float: right;
+    width: 3.2em;
+    position: relative;
+    left: 0;
+}
+    
+.top-nav__logo { 
+    position: relative;
+    width: auto;
+    float: left;
+}
+    
+ul.top-nav--desktop {
+    display: block;
+    float: left;
+    height: 3.2em;
+    li.top-nav__item {
+        display: inline-block;
+        float: left;
+        a {
+            height: 3.2em;
+            padding: 1.2em 1em;
+            display: block;
+        }
+        ul.top-nav__sub {
+            display: none;
+        }
+    }
+}
+    
+.top-nav__right {
+    float: right;
+    background-color: $color2;
+    a {
+        height: 3.2em;
+        padding-top: 1.2em;
+    }
+    .top-nav__login {
+        display: inline-block;
+        float: left;
+        a {
+            display: block;
+            padding: 1.2em 1em;
+        }
+    }
+    .top-nav__social {
+        display: inline-block;
+        a {
+            padding: 1em;
+            display: inline-block;
+        }
+    }
+}
+    
+/* Dropdown */
+
+ul.top-nav--desktop {
+    z-index: 1000;
+    li.top-nav__item {
+        ul.top-nav__sub {
+            display: block;
+            position: absolute;
+            top: -1em;
+            opacity: 0;
+            z-index: -500;
+            background-color: $color2;
+            transition-property: top, opacity;
+            transition-duration: .3s, .5s;
+            transition-timing-function: ease-in-out;
+        }
+        &:focus, &:hover {
+            ul.top-nav__sub {
+                background-color: $color2;
+                top: 3.2em;
+                opacity: 1;
+            }
+        }
+    }
+}
+    
+}
+
+/* XL styles */
+
+@media (min-width: $bp-xl) {
+
+    
+}
+
