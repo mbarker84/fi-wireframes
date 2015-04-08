@@ -133,6 +133,8 @@ li.top-nav__item {
     background-color: $color4;
     border-bottom: 1px solid $color1;
     padding: 1em;
+    z-index: 2500;
+    cursor: text;
 }
 
 /* Tablet styles */
@@ -141,12 +143,14 @@ li.top-nav__item {
     
 .top-nav__logo {
     @media (min-width: $bp-m) {
+        position: fixed;
         display: inline-block;
         width: 30%;
         background-color: $color2;
         height: 3.2em;
         padding: .6em;
         border-right: 1px solid $color1;
+        z-index: 3000;
         img.fi-logo {
             display: block;
             float:left;
@@ -171,6 +175,7 @@ li.top-nav__item {
     }
     &:focus, &:hover {
         ul.top-nav--mobile {
+            top: 3.2em;
             width: 50%;
         }
     }

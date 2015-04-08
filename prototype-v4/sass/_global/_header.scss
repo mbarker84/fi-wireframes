@@ -1,0 +1,29 @@
+header {
+    background-color: $color3;
+    padding: 6em 1em 3em 1em;
+}
+
+/* Tablet styles */
+
+@media (min-width: $bp-m) {
+    
+    .header__group {
+        @include container(1200px);
+    }
+    
+    h1.subhead {
+        max-width: 20em;
+    }
+    
+}
+
+/* Desktop styles */
+
+@media (min-width: $bp-l) {
+    
+    header {
+        padding-left: gutter();
+        padding-right: gutter();
+    }
+    
+}
