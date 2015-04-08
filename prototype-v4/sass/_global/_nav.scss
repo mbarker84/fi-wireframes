@@ -13,6 +13,26 @@ nav {
     display: none;
 }
 
+/* icons */
+
+nav {
+    i {
+        padding: 0 .4em;
+    }
+}
+
+li.top-nav__item {
+    i {
+        vertical-align: middle;
+    }
+}
+li.top-nav__sub--item {
+    i {
+        vertical-align: baseline;
+    }
+}
+
+
 
 /* Mobile nav */
 
@@ -175,6 +195,7 @@ li.top-nav__item {
 nav {
     background-color: $color2;
     height: 3.2em;
+    position: fixed;
 }
     
 ul.top-nav--mobile {
@@ -191,6 +212,12 @@ ul.top-nav--mobile {
     width: 3.2em;
     position: relative;
     left: 0;
+    transition-property: width;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    &:focus, &:hover {
+        width: 12em;
+    }
 }
     
 .top-nav__logo { 
@@ -206,6 +233,7 @@ ul.top-nav--desktop {
     li.top-nav__item {
         display: inline-block;
         float: left;
+        background-color: $color2;
         a {
             height: 3.2em;
             padding: 1.2em 1em;
@@ -251,7 +279,7 @@ ul.top-nav--desktop {
             position: absolute;
             top: -1em;
             opacity: 0;
-            z-index: -500;
+            z-index: -5000;
             background-color: $color2;
             transition-property: top, opacity;
             transition-duration: .3s, .5s;
@@ -266,6 +294,26 @@ ul.top-nav--desktop {
         }
     }
 }
+li.top-nav__sub--item { 
+    ul.top-nav__sub--2 {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        background-color: $color2;
+        transition-property: left, opacity;
+        transition-duration: .3s, .5s;
+        transition-timing-function: ease-in-out;
+        min-width: 8em;
+    }
+    &:focus, &:hover {
+        ul.top-nav__sub--2 {
+            display: block;
+            left: 100%;
+            opacity: 1;
+        }
+    }
+}
+
     
 }
 
