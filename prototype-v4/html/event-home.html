@@ -110,7 +110,11 @@
     <header>
         <div class="header__group">
             <h1>Future of Web Design</h1>
-            <h1 class="subhead">We produce awesome events for designers, developers and people working on the web.</h1>
+            <h1 class="subhead">We produce awesome events, videos and blog content for designers, developers and people working on the web.</h1>
+        </div>
+        <div class="header__call-to-action">
+            <p>Login or register now to access exclusive content</p>
+            <button class="cta"><a href="#signup-form">Login / Register FREE <i class="fa fa-arrow-right"></i></a></button>
         </div>
     </header>
     <!--main-->
@@ -167,17 +171,49 @@
                     <p>Lorem ipsum dolor sit amet, at essent aliquando usu, mei iudico voluptua voluptatibus ei, est ei vide natum. Justo percipit vix ut, te mel ludus graece deleniti, at mei partem ridens labitur. Eum ad probo alienum albucius, nobis primis accumsan no nam, elit malis hendrerit in sit. Per id impedit apeirian atomorum, per at argumentum concludaturque. Has cibo equidem ea, ex pri fugit labitur ocurreret.</p>
 
                     <p>Vix illud epicurei suscipiantur et. Ut has inani meliore. Senserit postulant pro at. Ne vel labore noster essent, ignota meliore sed ei, et est doctus repudiandae.</p>
+                    <button class="cta"><a href="#">Read more</a> <i class="fa fa-arrow-right"></i></button>
                 </div>
             </article>
+            <div class="event-home__content--latest">
+                <h2>Latest videos</h2>
+                <ul class="content__videos--latest">
+                    <li class="content__item"><a href="#"><h3>Video 1</h3></a></li>
+                    <li class="content__item"><a href="#"><h3>Video 1</h3></a></li>
+                    <li class="content__item"><a href="#"><h3>Video 1</h3></a></li>
+                </ul>
+            </div>
+        </section>
+        <!--explore-->
+        <section class="explore desktop-hide">
+            <h3>Explore</h3>
+            <ul class="explore__options">
+                <li class="explore__item">
+                    <a href="#">
+                        <i class="fa fa-video-camera"></i>
+                        <h4>Videos</h4>
+                    </a>
+                </li>
+                <li class="explore__item">
+                    <a href="#">
+                        <i class="fa fa-pencil"></i>
+                        <h4>Blog</h4>
+                    </a>
+                </li>
+                <li class="explore__item">
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <h4>Speakers</h4>
+                    </a>
+                </li>
+            </ul>
         </section>
         <!--signup-->
-        <section class="signup">
+        <section id="signup-form" class="signup">
             <img class="signup__image--main" src="" width="100%" height="auto">
             <div class="signup__text">
-                <h2>Videos, articles and more</h2>
-                <p>We have a wealth of inspiring videos of incredible talks and articles covering the latest and greatest in web design, all ready to share with you!</p>
+                <h2>Get exclusive access to videos, articles and more</h2>
                 <p>Simply register your details to access our video library and receive regular email updates.</p>
-                <button class="signup__button--open-form">Sign up <i class="fa fa-arrow-right"></i></button>
+                <button class="cta signup__button--open-form desktop-hide">Sign up <i class="fa fa-arrow-right"></i></button>
             </div>
             <form class="signup">
                 <h3>Sign up</h3>
@@ -202,34 +238,10 @@
                         <input type="radio" name="list" value="Design" class="radio-button"> All
                     </fieldset>
                 </fieldset>
-                <button name="submit">
+                <button class="cta" name="submit">
                     Go
                 </button>
             </form>
-        </section>
-        <!--explore-->
-        <section class="explore">
-            <h3>Explore</h3>
-            <ul class="explore__options">
-                <li class="explore__item">
-                    <a href="#">
-                        <i class="fa fa-video-camera"></i>
-                        <h4>Videos</h4>
-                    </a>
-                </li>
-                <li class="explore__item">
-                    <a href="#">
-                        <i class="fa fa-pencil"></i>
-                        <h4>Blog</h4>
-                    </a>
-                </li>
-                <li class="explore__item">
-                    <a href="#">
-                        <i class="fa fa-users"></i>
-                        <h4>Speakers</h4>
-                    </a>
-                </li>
-            </ul>
         </section>
         <!--get involved-->
         <section class="get-involved">

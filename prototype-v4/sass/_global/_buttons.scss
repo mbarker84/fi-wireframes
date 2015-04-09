@@ -1,0 +1,32 @@
+button {
+    a {
+        color: $color3;
+        text-decoration: none;
+    }
+}
+
+button.cta {
+    padding: 1em 3em;
+    border-radius: .2em;
+    border: none;
+    background-color: $color2;
+    color: $color1;
+    font-size: 1em;
+}
+
+button.signup__button--open-form {
+    display: none;
+}
+    
+/* Tablet styles */
+@media (min-width: $bp-m) {
+    
+    button.signup__button--open-form {
+        display: block;
+    }
+    
+    button.desktop-hide {
+        display: none;
+    }
+    
+}

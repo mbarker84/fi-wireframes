@@ -2964,6 +2964,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* Variables and mixins */
 /* Clearfix */
 /* Partials */
+/* line 2, ../sass/_global/_buttons.scss */
+button a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+/* line 8, ../sass/_global/_buttons.scss */
+button.cta {
+  padding: 1em 3em;
+  border-radius: .2em;
+  border: none;
+  background-color: #333333;
+  color: #999999;
+  font-size: 1em;
+}
+
+/* line 17, ../sass/_global/_buttons.scss */
+button.signup__button--open-form {
+  display: none;
+}
+
+/* Tablet styles */
+@media (min-width: 700px) {
+  /* line 24, ../sass/_global/_buttons.scss */
+  button.signup__button--open-form {
+    display: block;
+  }
+
+  /* line 28, ../sass/_global/_buttons.scss */
+  button.desktop-hide {
+    display: none;
+  }
+}
 /* line 1, ../sass/_global/_fonts.scss */
 h1 {
   font-size: 3.2em;
@@ -3128,38 +3161,10 @@ form.signup input.radio-button {
 form.signup input.radio-button:first-child {
   margin-left: 0;
 }
-/* line 33, ../sass/_global/_forms.scss */
-form.signup button {
-  padding: 1em 3em;
-  display: block;
-  margin: 0 auto;
-  border-radius: .2em;
-  border: none;
-  background-color: #333333;
-  color: #999999;
-  font-size: 1em;
-}
-
-/* line 46, ../sass/_global/_forms.scss */
-button.signup__button--open-form {
-  padding: 1em 3em;
-  display: block;
-  border-radius: .2em;
-  border: none;
-  background-color: #333333;
-  color: #999999;
-  font-size: 1em;
-  display: none;
-}
 
 /* Tablet styles */
 @media (min-width: 700px) {
-  /* line 59, ../sass/_global/_forms.scss */
-  button.signup__button--open-form {
-    display: block;
-  }
-
-  /* line 63, ../sass/_global/_forms.scss */
+  /* line 38, ../sass/_global/_forms.scss */
   form.signup {
     display: none;
   }
@@ -3927,11 +3932,118 @@ li.explore__item a h4 {
     font-size: 5em;
   }
 }
-/* line 2, ../sass/_global/_page-types/_layout-blog-home.scss */
+/* Events */
+/* line 4, ../sass/_global/_page-types/_layout-blog-home.scss */
 section.event-home__events a {
   color: #333333;
 }
 
+/* Events--desktop styles */
+@media (min-width: 900px) {
+  /* line 14, ../sass/_global/_page-types/_layout-blog-home.scss */
+  section.event-home__events li.events__single--regular {
+    width: 32.20339%;
+    float: left;
+    height: 15em;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  section.event-home__events li.events__single--regular:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  section.event-home__events li.events__single--regular:nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  section.event-home__events li.events__single--regular:nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+/* Content library */
+/* line 24, ../sass/_global/_page-types/_layout-blog-home.scss */
+section.event-home__content {
+  background-color: #cccccc;
+}
+
+/* line 8, ../sass/_mixins.scss */
+article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 32, ../sass/_global/_page-types/_layout-blog-home.scss */
+img.event-home__article__image {
+  height: 15em;
+  background-color: #333333;
+  margin-bottom: 5.26316%;
+}
+
+/* line 38, ../sass/_global/_page-types/_layout-blog-home.scss */
+.event-home__content--latest {
+  display: none;
+}
+
+/* Content library--desktop styles */
+@media (min-width: 900px) {
+  /* line 45, ../sass/_global/_page-types/_layout-blog-home.scss */
+  .event-home__article__image {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+
+  /* line 49, ../sass/_global/_page-types/_layout-blog-home.scss */
+  .event-home__article__text {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 53, ../sass/_global/_page-types/_layout-blog-home.scss */
+  .event-home__content--latest {
+    display: block;
+  }
+  /* line 55, ../sass/_global/_page-types/_layout-blog-home.scss */
+  .event-home__content--latest li {
+    width: 32.20339%;
+    float: left;
+    height: 12em;
+    background-color: #999999;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  .event-home__content--latest li:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  .event-home__content--latest li:nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_gallery.scss */
+  .event-home__content--latest li:nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 59, ../sass/_global/_page-types/_layout-blog-home.scss */
+  .event-home__content--latest li a {
+    padding: 1em;
+    display: block;
+    height: 100%;
+  }
+}
 /* line 21, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -3952,4 +4064,18 @@ body {
 /* line 34, ../sass/screen.scss */
 a, a:focus, a:visited, a:hover, a:active {
   color: #FFFFFF;
+}
+
+@media (min-width: 900px) {
+  /* line 38, ../sass/screen.scss */
+  .desktop-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 44, ../sass/screen.scss */
+  .desktop-show {
+    display: block;
+  }
 }

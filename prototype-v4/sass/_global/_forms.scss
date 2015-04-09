@@ -29,38 +29,14 @@ form.signup {
             margin-left: 0;
         }
     }
-
-    button {
-        padding: 1em 3em;
-        display: block;
-        margin: 0 auto;
-        border-radius: .2em;
-        border: none;
-        background-color: $color2;
-        color: $color1;
-        font-size: 1em;
-    }
     
-}
-
-button.signup__button--open-form {
-    padding: 1em 3em;
-    display: block;
-    border-radius: .2em;
-    border: none;
-    background-color: $color2;
-    color: $color1;
-    font-size: 1em;
-    display: none;
 }
     
 /* Tablet styles */
 @media (min-width: $bp-m) {
-    button.signup__button--open-form {
-        display: block;
-    }
     
     form.signup {
         display: none;
     }
+    
 }

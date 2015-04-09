@@ -34,3 +34,15 @@ body {
 a, a:focus, a:visited, a:hover, a:active {
     color: $color4;
 }
+
+.desktop-hide {
+    @media (min-width: $bp-l) {
+        display: none;
+    }
+}
+
+.desktop-show {
+    @media (min-width: $bp-l) {
+        display: block;
+    }
+}
