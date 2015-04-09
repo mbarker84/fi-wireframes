@@ -3,7 +3,6 @@
 nav {
     font-family: $font-stack1;
     color: $color1;
-    position: relative;
     width: 100%;
 }
 
@@ -24,6 +23,7 @@ nav {
 li.top-nav__item {
     i {
         vertical-align: middle;
+        padding-right: 0;
     }
 }
 li.top-nav__sub--item {
@@ -150,7 +150,7 @@ li.top-nav__item {
         height: 3.2em;
         padding: .6em;
         border-right: 1px solid $color1;
-        z-index: 3000;
+        z-index: 5000;
         img.fi-logo {
             display: block;
             float:left;
@@ -283,26 +283,32 @@ ul.top-nav--desktop {
             display: block;
             position: absolute;
             top: -1em;
+            height: 3.2em;
             opacity: 0;
             z-index: -5000;
+            overflow: hidden;
             background-color: $color2;
-            transition-property: top, opacity;
-            transition-duration: .3s, .5s;
+            transition-property: top, height, opacity;
+            transition-duration: .3s, .5s, .5s;
             transition-timing-function: ease-in-out;
         }
         &:focus, &:hover {
             ul.top-nav__sub {
                 background-color: $color2;
                 top: 3.2em;
+                height: auto;
                 opacity: 1;
+                overflow: visible;
             }
         }
     }
 }
 li.top-nav__sub--item { 
+    position: relative;
     ul.top-nav__sub--2 {
         position: absolute;
-        left: 0;
+        top: 0;
+        left: 50%;
         opacity: 0;
         background-color: $color2;
         transition-property: left, opacity;

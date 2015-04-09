@@ -11,21 +11,19 @@ section {
 }
 
 /* Section--Tablet-styles */
-@media (min-width: $bp-m) {
+@media (min-width: $bp-xl) {
     
     section {
-        @include container(1200px);
-        @media (min-width: 1200px) {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }
 
 /* Events */
 
-ul.events__all {
+ul.events--priority,
+ul.events--regular {
     a {
         display: block;
         height: 100%;
@@ -40,7 +38,7 @@ li.events__single--priority {
     margin-bottom: gutter();
 }
 
-li.events__single {
+li.events__single--regular {
     @include gallery(2 of 4);
     height: 7em;
     background-color: $color1;
@@ -75,8 +73,8 @@ img.events__image {
         }
     }
     
-    li.events__single {
-        height: 10em;
+    li.events__single--regular {
+        height: 15em;
     }
     
 }
@@ -103,9 +101,10 @@ img.events__image {
         }
     }
     
-    li.events__single {
-        @include gallery(6 of 12);
+    li.events__single--regular {
+        @include gallery(3 of 12);
         margin-bottom: gutter(12);
+        height: 10em;
     }
     
     img.events__image {
@@ -118,6 +117,27 @@ img.events__image {
 
 section.signup {
     background-color: $color1;
+}
+
+img.signup__image--main {
+    display: none;
+}
+
+/* Signup--desktop styles */
+
+@media (min-width: $bp-l) {
+    
+    img.signup__image--main {
+        @include span(6 of 12);
+        display: block;
+        height: 30em;
+        background-color: $color2;
+    }
+    
+    .signup__text {
+        @include span(6 of 12 last);
+    }
+    
 }
 
 /* Get Involved */
@@ -188,6 +208,7 @@ img.get-involved__image {
 /* Explore */
 
 section.explore {
+    background-color: $color2;
     h3 {
         padding: 1em;
         background-color: $color3;
@@ -196,8 +217,8 @@ section.explore {
 }
 
 ul.explore__options {
+    @include container(1200px);
     @include cf;
-    background-color: $color2;
     color: $color3;
 }
 
@@ -219,4 +240,18 @@ li.explore__item {
             margin-bottom: 0;
         }
     }
+}
+
+/* Explore--desktop styles */
+
+@media (min-width: $bp-l) {
+
+    ul.explore__options {
+        padding: gutter();
+    }
+
+    li.explore__item {
+        font-size: 5em;
+    }
+    
 }

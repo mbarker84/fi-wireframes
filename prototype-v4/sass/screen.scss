@@ -12,7 +12,7 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 /* Partials */
-@import '_global/*.scss';
+@import '_global/**/*';
 
 $susy: (
     columns: 12,
